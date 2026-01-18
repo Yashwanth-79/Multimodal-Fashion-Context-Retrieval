@@ -38,7 +38,7 @@ Used the **FashionPedia (ValidationSet)** for indexing and retrieval evaluation,
 ---
 
 ## 🏗️ Architecture
-The system uses an **832-dimensional fused embedding space**, combining global and local features for maximum precision.
+
 
 ```mermaid
 graph TD
@@ -162,5 +162,6 @@ Our system doesn't just treat all features equally. It uses **Adaptive Query-Spe
 <div align="center">
   Developed by <a href="https://github.com/Yashwanth-79">Yashwanth-79</a>
 </div>
+
 
 
