@@ -1,0 +1,1053 @@
+2026-01-18 19:38:47,475 - fashion_retrieval - INFO - 
+============================================================
+2026-01-18 19:38:47,475 - fashion_retrieval - INFO - STEP 2: Testing Retrieval
+2026-01-18 19:38:47,476 - fashion_retrieval - INFO - ============================================================
+
+2026-01-18 19:38:47,476 - fashion_retrieval - INFO - Loading search engine...
+2026-01-18 19:38:47,482 - fashion_retrieval - INFO - ✓ Loaded FAISS index: 2064 vectors
+2026-01-18 19:38:47,505 - fashion_retrieval - INFO - ✓ Loaded metadata: 2064 images
+2026-01-18 19:38:57,038 - fashion_retrieval - INFO - Loading DistilBERT model for smart attribute extraction...
+2026-01-18 19:39:02,914 - fashion_retrieval - INFO - ✓ Search engine ready!
+
+2026-01-18 19:39:02,914 - fashion_retrieval - INFO - 
+============================================================
+2026-01-18 19:39:02,914 - fashion_retrieval - INFO - Test Query 1: A red tie and a white shirt in a formal setting
+2026-01-18 19:39:02,915 - fashion_retrieval - INFO - ============================================================
+2026-01-18 19:39:04,253 - fashion_retrieval - INFO - 
+🔍 Query Processing:
+2026-01-18 19:39:04,253 - fashion_retrieval - INFO -   Raw: A red tie and a white shirt in a formal setting
+2026-01-18 19:39:04,253 - fashion_retrieval - INFO -   Parsed colors: ['red tie and a white', 'white']
+2026-01-18 19:39:04,254 - fashion_retrieval - INFO -   Parsed garments: ['a red tie and a white shirt', 'a red tie']
+2026-01-18 19:39:04,254 - fashion_retrieval - INFO -   Parsed scenes: ['a red tie and a white shirt', 'a red tie']
+2026-01-18 19:39:04,254 - fashion_retrieval - INFO - 
+Weight allocation:
+  clip: 40.00% (global semantic understanding)
+  color: 20.00% (colors: ['red tie and a white', 'white'])
+  garment: 20.00% (garments: ['a red tie and a white shirt', 'a red tie'])
+  scene: 20.00% (scenes: ['a red tie and a white shirt', 'a red tie'])
+
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO - 
+📊 Query Analysis:
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -   Colors detected: ['red tie and a white', 'white']
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -   Garments detected: ['a red tie and a white shirt', 'a red tie']
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -   Scenes detected: ['a red tie and a white shirt', 'a red tie']
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -   Is compositional: True
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO - 
+⚖️  Fusion Weights Used:
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -   clip: 0.400
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -   color: 0.200
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -   garment: 0.200
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -   scene: 0.200
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO - 
+🎯 Top 10 Results:
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO - 
+  1. download (3).jpg
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Score: 1.7506
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Colors: black, gray, tan
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Garments: suit, suit jacket
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Scenes: office interior, modern office
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO - 
+  2. 913109abff6b0222d9afed1c7aaeb38f.jpg
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Score: 1.7641
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Colors: lavender, gray, black
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Garments: suit, necktie
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Scenes: modern office, sidewalk
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO - 
+  3. c3481ffac40b45bed9ba4cb688928e48.jpg
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Score: 1.7677
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Colors: black, silver, gray
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Garments: dress pants, sport coat
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Scenes: sidewalk, downtown
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO - 
+  4. download (29).jpg
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Score: 1.7690
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Colors: lavender, brown, silver
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Garments: bow tie, tie
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Scenes: modern office, open office
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO - 
+  5. a7f98842c293b87cb5d4f277d08682f4.jpg
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Score: 1.7703
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Colors: gray, black, beige
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Garments: suit, suit jacket
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Scenes: crosswalk, sidewalk
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO - 
+  6. f79f1d0fc8dfae388e8a1887623228ea.jpg
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Score: 1.7709
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Colors: brown, gray, black
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Garments: suit jacket, blazer
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Scenes: city center, business center
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO - 
+  7. download (4).jpg
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Score: 1.7718
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Colors: silver, black, gray
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Garments: pencil skirt, dress shirt
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Scenes: meeting room, conference room
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO - 
+  8. download (30).jpg
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Score: 1.7722
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Colors: lavender, black, gray
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Garments: tie, necktie
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Scenes: office interior, house
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO - 
+  9. 13714a1c52d443ebeb3357cb3c6b5285.jpg
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Score: 1.7771
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Colors: black, gray, silver
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Garments: slacks, sport coat
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Scenes: balcony, business center
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO - 
+  10. 5e9318c2b27f4b6894a5f98f92845bd8.jpg
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Score: 1.7784
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Colors: lavender, black, gray
+2026-01-18 19:39:04,284 - fashion_retrieval - INFO -      Garments: blazer, formal trousers
+2026-01-18 19:39:04,296 - fashion_retrieval - INFO -      Scenes: modern office, corporate office
+2026-01-18 19:39:04,332 - fashion_retrieval - INFO - 
+============================================================
+2026-01-18 19:39:04,332 - fashion_retrieval - INFO - ✅ PIPELINE COMPLETE!
+2026-01-18 19:39:04,332 - fashion_retrieval - INFO - ============================================================
+2026-01-18 19:40:53,226 - fashion_retrieval - INFO - Loading search engine...
+2026-01-18 19:40:53,233 - fashion_retrieval - INFO - ✓ Loaded FAISS index: 2064 vectors
+2026-01-18 19:40:53,259 - fashion_retrieval - INFO - ✓ Loaded metadata: 2064 images
+2026-01-18 19:41:02,718 - fashion_retrieval - INFO - Loading DistilBERT model for smart attribute extraction...
+2026-01-18 19:41:08,933 - fashion_retrieval - INFO - ✓ Search engine ready!
+
+2026-01-18 19:43:03,671 - fashion_retrieval - INFO - Loading search engine...
+2026-01-18 19:43:03,679 - fashion_retrieval - INFO - ✓ Loaded FAISS index: 2064 vectors
+2026-01-18 19:43:03,706 - fashion_retrieval - INFO - ✓ Loaded metadata: 2064 images
+2026-01-18 19:43:06,207 - fashion_retrieval - INFO - Loading DistilBERT model for smart attribute extraction...
+2026-01-18 19:43:06,623 - fashion_retrieval - INFO - ✓ Search engine ready!
+
+2026-01-18 19:43:37,133 - fashion_retrieval - INFO - Loading search engine...
+2026-01-18 19:43:37,141 - fashion_retrieval - INFO - ✓ Loaded FAISS index: 2064 vectors
+2026-01-18 19:43:37,164 - fashion_retrieval - INFO - ✓ Loaded metadata: 2064 images
+2026-01-18 19:43:39,968 - fashion_retrieval - INFO - Loading DistilBERT model for smart attribute extraction...
+2026-01-18 19:43:40,335 - fashion_retrieval - INFO - ✓ Search engine ready!
+
+2026-01-18 19:43:47,209 - fashion_retrieval - INFO - Loading search engine...
+2026-01-18 19:43:47,216 - fashion_retrieval - INFO - ✓ Loaded FAISS index: 2064 vectors
+2026-01-18 19:43:47,239 - fashion_retrieval - INFO - ✓ Loaded metadata: 2064 images
+2026-01-18 19:43:49,865 - fashion_retrieval - INFO - Loading DistilBERT model for smart attribute extraction...
+2026-01-18 19:43:50,309 - fashion_retrieval - INFO - ✓ Search engine ready!
+
+2026-01-18 19:45:36,243 - fashion_retrieval - INFO - Loading search engine...
+2026-01-18 19:45:36,250 - fashion_retrieval - INFO - ✓ Loaded FAISS index: 2064 vectors
+2026-01-18 19:45:36,277 - fashion_retrieval - INFO - ✓ Loaded metadata: 2064 images
+2026-01-18 19:45:38,640 - fashion_retrieval - INFO - Loading DistilBERT model for smart attribute extraction...
+2026-01-18 19:45:38,988 - fashion_retrieval - INFO - ✓ Search engine ready!
+
+2026-01-18 19:49:14,389 - fashion_retrieval - INFO - 
+============================================================
+2026-01-18 19:49:14,389 - fashion_retrieval - INFO - STEP 2: Testing Retrieval
+2026-01-18 19:49:14,389 - fashion_retrieval - INFO - ============================================================
+
+2026-01-18 19:49:14,389 - fashion_retrieval - INFO - Loading search engine...
+2026-01-18 19:49:14,396 - fashion_retrieval - INFO - ✓ Loaded FAISS index: 2064 vectors
+2026-01-18 19:49:14,414 - fashion_retrieval - INFO - ✓ Loaded metadata: 2064 images
+2026-01-18 19:49:26,326 - fashion_retrieval - INFO - Loading DistilBERT model for smart attribute extraction...
+2026-01-18 19:49:32,206 - fashion_retrieval - INFO - ✓ Search engine ready!
+
+2026-01-18 19:49:32,206 - fashion_retrieval - INFO - 
+============================================================
+2026-01-18 19:49:32,206 - fashion_retrieval - INFO - Test Query 1: A red tie and a white shirt in a formal setting
+2026-01-18 19:49:32,206 - fashion_retrieval - INFO - ============================================================
+2026-01-18 19:49:33,315 - fashion_retrieval - INFO - 
+🔍 Query Processing:
+2026-01-18 19:49:33,315 - fashion_retrieval - INFO -   Raw: A red tie and a white shirt in a formal setting
+2026-01-18 19:49:33,315 - fashion_retrieval - INFO -   Parsed colors: ['red tie and a white', 'white']
+2026-01-18 19:49:33,316 - fashion_retrieval - INFO -   Parsed garments: ['a red tie and a white shirt', 'a red tie']
+2026-01-18 19:49:33,316 - fashion_retrieval - INFO -   Parsed scenes: ['a red tie and a white shirt', 'a red tie']
+2026-01-18 19:49:33,316 - fashion_retrieval - INFO - 
+Weight allocation:
+  clip: 40.00% (global semantic understanding)
+  color: 20.00% (colors: ['red tie and a white', 'white'])
+  garment: 20.00% (garments: ['a red tie and a white shirt', 'a red tie'])
+  scene: 20.00% (scenes: ['a red tie and a white shirt', 'a red tie'])
+
+2026-01-18 19:49:33,346 - fashion_retrieval - INFO - 
+📊 Query Analysis:
+2026-01-18 19:49:33,346 - fashion_retrieval - INFO -   Colors detected: ['red tie and a white', 'white']
+2026-01-18 19:49:33,346 - fashion_retrieval - INFO -   Garments detected: ['a red tie and a white shirt', 'a red tie']
+2026-01-18 19:49:33,346 - fashion_retrieval - INFO -   Scenes detected: ['a red tie and a white shirt', 'a red tie']
+2026-01-18 19:49:33,347 - fashion_retrieval - INFO -   Is compositional: True
+2026-01-18 19:49:33,347 - fashion_retrieval - INFO - 
+⚖️  Fusion Weights Used:
+2026-01-18 19:49:33,347 - fashion_retrieval - INFO -   clip: 0.400
+2026-01-18 19:49:33,347 - fashion_retrieval - INFO -   color: 0.200
+2026-01-18 19:49:33,347 - fashion_retrieval - INFO -   garment: 0.200
+2026-01-18 19:49:33,347 - fashion_retrieval - INFO -   scene: 0.200
+2026-01-18 19:49:33,347 - fashion_retrieval - INFO - 
+🎯 Top 10 Results:
+2026-01-18 19:49:33,347 - fashion_retrieval - INFO - 
+  1. download (3).jpg
+2026-01-18 19:49:33,349 - fashion_retrieval - INFO -      Score: 1.7506
+2026-01-18 19:49:33,349 - fashion_retrieval - INFO -      Colors: black, gray, tan
+2026-01-18 19:49:33,349 - fashion_retrieval - INFO -      Garments: suit, suit jacket
+2026-01-18 19:49:33,350 - fashion_retrieval - INFO -      Scenes: office interior, modern office
+2026-01-18 19:49:33,350 - fashion_retrieval - INFO - 
+  2. 913109abff6b0222d9afed1c7aaeb38f.jpg
+2026-01-18 19:49:33,350 - fashion_retrieval - INFO -      Score: 1.7641
+2026-01-18 19:49:33,350 - fashion_retrieval - INFO -      Colors: lavender, gray, black
+2026-01-18 19:49:33,350 - fashion_retrieval - INFO -      Garments: suit, necktie
+2026-01-18 19:49:33,351 - fashion_retrieval - INFO -      Scenes: modern office, sidewalk
+2026-01-18 19:49:33,351 - fashion_retrieval - INFO - 
+  3. c3481ffac40b45bed9ba4cb688928e48.jpg
+2026-01-18 19:49:33,351 - fashion_retrieval - INFO -      Score: 1.7677
+2026-01-18 19:49:33,351 - fashion_retrieval - INFO -      Colors: black, silver, gray
+2026-01-18 19:49:33,352 - fashion_retrieval - INFO -      Garments: dress pants, sport coat
+2026-01-18 19:49:33,352 - fashion_retrieval - INFO -      Scenes: sidewalk, downtown
+2026-01-18 19:49:33,352 - fashion_retrieval - INFO - 
+  4. download (29).jpg
+2026-01-18 19:49:33,352 - fashion_retrieval - INFO -      Score: 1.7690
+2026-01-18 19:49:33,352 - fashion_retrieval - INFO -      Colors: lavender, brown, silver
+2026-01-18 19:49:33,353 - fashion_retrieval - INFO -      Garments: bow tie, tie
+2026-01-18 19:49:33,353 - fashion_retrieval - INFO -      Scenes: modern office, open office
+2026-01-18 19:49:33,354 - fashion_retrieval - INFO - 
+  5. a7f98842c293b87cb5d4f277d08682f4.jpg
+2026-01-18 19:49:33,354 - fashion_retrieval - INFO -      Score: 1.7703
+2026-01-18 19:49:33,354 - fashion_retrieval - INFO -      Colors: gray, black, beige
+2026-01-18 19:49:33,354 - fashion_retrieval - INFO -      Garments: suit, suit jacket
+2026-01-18 19:49:33,354 - fashion_retrieval - INFO -      Scenes: crosswalk, sidewalk
+2026-01-18 19:49:33,354 - fashion_retrieval - INFO - 
+  6. f79f1d0fc8dfae388e8a1887623228ea.jpg
+2026-01-18 19:49:33,355 - fashion_retrieval - INFO -      Score: 1.7709
+2026-01-18 19:49:33,355 - fashion_retrieval - INFO -      Colors: brown, gray, black
+2026-01-18 19:49:33,355 - fashion_retrieval - INFO -      Garments: suit jacket, blazer
+2026-01-18 19:49:33,355 - fashion_retrieval - INFO -      Scenes: city center, business center
+2026-01-18 19:49:33,355 - fashion_retrieval - INFO - 
+  7. download (4).jpg
+2026-01-18 19:49:33,355 - fashion_retrieval - INFO -      Score: 1.7718
+2026-01-18 19:49:33,356 - fashion_retrieval - INFO -      Colors: silver, black, gray
+2026-01-18 19:49:33,356 - fashion_retrieval - INFO -      Garments: pencil skirt, dress shirt
+2026-01-18 19:49:33,356 - fashion_retrieval - INFO -      Scenes: meeting room, conference room
+2026-01-18 19:49:33,356 - fashion_retrieval - INFO - 
+  8. download (30).jpg
+2026-01-18 19:49:33,356 - fashion_retrieval - INFO -      Score: 1.7722
+2026-01-18 19:49:33,357 - fashion_retrieval - INFO -      Colors: lavender, black, gray
+2026-01-18 19:49:33,357 - fashion_retrieval - INFO -      Garments: tie, necktie
+2026-01-18 19:49:33,357 - fashion_retrieval - INFO -      Scenes: office interior, house
+2026-01-18 19:49:33,357 - fashion_retrieval - INFO - 
+  9. 13714a1c52d443ebeb3357cb3c6b5285.jpg
+2026-01-18 19:49:33,357 - fashion_retrieval - INFO -      Score: 1.7771
+2026-01-18 19:49:33,358 - fashion_retrieval - INFO -      Colors: black, gray, silver
+2026-01-18 19:49:33,358 - fashion_retrieval - INFO -      Garments: slacks, sport coat
+2026-01-18 19:49:33,358 - fashion_retrieval - INFO -      Scenes: balcony, business center
+2026-01-18 19:49:33,359 - fashion_retrieval - INFO - 
+  10. 5e9318c2b27f4b6894a5f98f92845bd8.jpg
+2026-01-18 19:49:33,359 - fashion_retrieval - INFO -      Score: 1.7784
+2026-01-18 19:49:33,359 - fashion_retrieval - INFO -      Colors: lavender, black, gray
+2026-01-18 19:49:33,359 - fashion_retrieval - INFO -      Garments: blazer, formal trousers
+2026-01-18 19:49:33,359 - fashion_retrieval - INFO -      Scenes: modern office, corporate office
+2026-01-18 19:49:33,381 - fashion_retrieval - INFO - 
+============================================================
+2026-01-18 19:49:33,381 - fashion_retrieval - INFO - ✅ PIPELINE COMPLETE!
+2026-01-18 19:49:33,381 - fashion_retrieval - INFO - ============================================================
+2026-01-18 19:53:36,706 - fashion_retrieval - INFO - 
+============================================================
+2026-01-18 19:53:36,711 - fashion_retrieval - INFO - STEP 2: Testing Retrieval
+2026-01-18 19:53:36,711 - fashion_retrieval - INFO - ============================================================
+
+2026-01-18 19:53:36,711 - fashion_retrieval - INFO - Loading search engine...
+2026-01-18 19:53:36,711 - fashion_retrieval - INFO - ✓ Loaded FAISS index: 2064 vectors
+2026-01-18 19:53:36,737 - fashion_retrieval - INFO - ✓ Loaded metadata: 2064 images
+2026-01-18 19:53:48,864 - fashion_retrieval - INFO - Loading DistilBERT model for smart attribute extraction...
+2026-01-18 19:53:56,230 - fashion_retrieval - INFO - ✓ Search engine ready!
+
+2026-01-18 19:53:56,230 - fashion_retrieval - INFO - 
+============================================================
+2026-01-18 19:53:56,230 - fashion_retrieval - INFO - Test Query 1: A red tie and a white shirt in a formal setting
+2026-01-18 19:53:56,230 - fashion_retrieval - INFO - ============================================================
+2026-01-18 19:53:56,231 - fashion_retrieval - INFO - ℹ️  Complex query detected: Enabling Attribute Re-ranking
+2026-01-18 19:53:57,502 - fashion_retrieval - INFO - 
+📊 Query Analysis:
+2026-01-18 19:53:57,503 - fashion_retrieval - INFO -   Colors detected: ['red tie and a white', 'white']
+2026-01-18 19:53:57,503 - fashion_retrieval - INFO -   Garments detected: ['a red tie and a white shirt', 'a red tie']
+2026-01-18 19:53:57,504 - fashion_retrieval - INFO -   Scenes detected: ['a red tie and a white shirt', 'a red tie']
+2026-01-18 19:53:57,504 - fashion_retrieval - INFO -   Is compositional: True
+2026-01-18 19:53:57,504 - fashion_retrieval - INFO - 
+⚖️  Fusion Weights Used:
+2026-01-18 19:53:57,505 - fashion_retrieval - INFO -   clip: 0.400
+2026-01-18 19:53:57,505 - fashion_retrieval - INFO -   color: 0.200
+2026-01-18 19:53:57,505 - fashion_retrieval - INFO -   garment: 0.200
+2026-01-18 19:53:57,505 - fashion_retrieval - INFO -   scene: 0.200
+2026-01-18 19:53:57,505 - fashion_retrieval - INFO - 
+🎯 Top 10 Results:
+2026-01-18 19:53:57,506 - fashion_retrieval - INFO - 
+  1. download (28)dsd.jpg
+2026-01-18 19:53:57,506 - fashion_retrieval - INFO -      Score: 2.1044
+2026-01-18 19:53:57,506 - fashion_retrieval - INFO -      Colors: silver, navy, lavender
+2026-01-18 19:53:57,506 - fashion_retrieval - INFO -      Garments: suit, tie
+2026-01-18 19:53:57,506 - fashion_retrieval - INFO -      Scenes: modern office, office interior
+2026-01-18 19:53:57,507 - fashion_retrieval - INFO - 
+  2. download (1).jpg
+2026-01-18 19:53:57,507 - fashion_retrieval - INFO -      Score: 2.0879
+2026-01-18 19:53:57,507 - fashion_retrieval - INFO -      Colors: gray, lavender, silver
+2026-01-18 19:53:57,507 - fashion_retrieval - INFO -      Garments: tie, dress shirt
+2026-01-18 19:53:57,507 - fashion_retrieval - INFO -      Scenes: open office, modern office
+2026-01-18 19:53:57,508 - fashion_retrieval - INFO - 
+  3. download (30).jpg
+2026-01-18 19:53:57,508 - fashion_retrieval - INFO -      Score: 2.0722
+2026-01-18 19:53:57,508 - fashion_retrieval - INFO -      Colors: lavender, black, gray
+2026-01-18 19:53:57,508 - fashion_retrieval - INFO -      Garments: tie, necktie
+2026-01-18 19:53:57,508 - fashion_retrieval - INFO -      Scenes: office interior, house
+2026-01-18 19:53:57,509 - fashion_retrieval - INFO - 
+  4. download (29).jpg
+2026-01-18 19:53:57,509 - fashion_retrieval - INFO -      Score: 2.0690
+2026-01-18 19:53:57,510 - fashion_retrieval - INFO -      Colors: lavender, brown, silver
+2026-01-18 19:53:57,510 - fashion_retrieval - INFO -      Garments: bow tie, tie
+2026-01-18 19:53:57,510 - fashion_retrieval - INFO -      Scenes: modern office, open office
+2026-01-18 19:53:57,510 - fashion_retrieval - INFO - 
+  5. 913109abff6b0222d9afed1c7aaeb38f.jpg
+2026-01-18 19:53:57,510 - fashion_retrieval - INFO -      Score: 2.0641
+2026-01-18 19:53:57,511 - fashion_retrieval - INFO -      Colors: lavender, gray, black
+2026-01-18 19:53:57,511 - fashion_retrieval - INFO -      Garments: suit, necktie
+2026-01-18 19:53:57,511 - fashion_retrieval - INFO -      Scenes: modern office, sidewalk
+2026-01-18 19:53:57,511 - fashion_retrieval - INFO - 
+  6. download (2).jpg
+2026-01-18 19:53:57,512 - fashion_retrieval - INFO -      Score: 1.9672
+2026-01-18 19:53:57,512 - fashion_retrieval - INFO -      Colors: lavender, gray, silver
+2026-01-18 19:53:57,512 - fashion_retrieval - INFO -      Garments: dress shirt, button-down shirt
+2026-01-18 19:53:57,512 - fashion_retrieval - INFO -      Scenes: modern office, open office
+2026-01-18 19:53:57,513 - fashion_retrieval - INFO - 
+  7. 0229bef01efc25f915374d55f59cbfdd.jpg
+2026-01-18 19:53:57,513 - fashion_retrieval - INFO -      Score: 1.9454
+2026-01-18 19:53:57,513 - fashion_retrieval - INFO -      Colors: gray, black, silver
+2026-01-18 19:53:57,513 - fashion_retrieval - INFO -      Garments: casual shirt, shirt
+2026-01-18 19:53:57,513 - fashion_retrieval - INFO -      Scenes: city walk, downtown
+2026-01-18 19:53:57,514 - fashion_retrieval - INFO - 
+  8. f535a2ed5f01521543bf522d7a8a0248.jpg
+2026-01-18 19:53:57,514 - fashion_retrieval - INFO -      Score: 1.8259
+2026-01-18 19:53:57,514 - fashion_retrieval - INFO -      Colors: gray, navy, silver
+2026-01-18 19:53:57,514 - fashion_retrieval - INFO -      Garments: pencil skirt, formal skirt
+2026-01-18 19:53:57,515 - fashion_retrieval - INFO -      Scenes: crosswalk, sidewalk
+2026-01-18 19:53:57,515 - fashion_retrieval - INFO - 
+  9. d05ff29218305d0a5b3b1794bbafaf0a.jpg
+2026-01-18 19:53:57,515 - fashion_retrieval - INFO -      Score: 1.8251
+2026-01-18 19:53:57,515 - fashion_retrieval - INFO -      Colors: brown, black, tan
+2026-01-18 19:53:57,515 - fashion_retrieval - INFO -      Garments: pencil skirt, cocktail dress
+2026-01-18 19:53:57,516 - fashion_retrieval - INFO -      Scenes: city center, balcony
+2026-01-18 19:53:57,516 - fashion_retrieval - INFO - 
+  10. 0d5d5e00e589fe5641b919179794994b.jpg
+2026-01-18 19:53:57,516 - fashion_retrieval - INFO -      Score: 1.8238
+2026-01-18 19:53:57,516 - fashion_retrieval - INFO -      Colors: gray, lavender, silver
+2026-01-18 19:53:57,516 - fashion_retrieval - INFO -      Garments: sneakers, shorts
+2026-01-18 19:53:57,516 - fashion_retrieval - INFO -      Scenes: outdoor park, green space
+2026-01-18 19:53:57,537 - fashion_retrieval - INFO - 
+============================================================
+2026-01-18 19:53:57,538 - fashion_retrieval - INFO - ✅ PIPELINE COMPLETE!
+2026-01-18 19:53:57,539 - fashion_retrieval - INFO - ============================================================
+2026-01-18 20:15:07,417 - fashion_retrieval - INFO - 
+============================================================
+2026-01-18 20:15:07,417 - fashion_retrieval - INFO - STEP 2: Testing Retrieval
+2026-01-18 20:15:07,417 - fashion_retrieval - INFO - ============================================================
+
+2026-01-18 20:15:07,417 - fashion_retrieval - INFO - Loading search engine...
+2026-01-18 20:15:07,429 - fashion_retrieval - INFO - ✓ Loaded FAISS index: 2064 vectors
+2026-01-18 20:15:07,451 - fashion_retrieval - INFO - ✓ Loaded metadata: 2064 images
+2026-01-18 20:15:18,476 - fashion_retrieval - INFO - Loading DistilBERT model for smart attribute extraction...
+2026-01-18 20:15:24,889 - fashion_retrieval - INFO - ✓ Search engine ready!
+
+2026-01-18 20:15:24,891 - fashion_retrieval - INFO - 
+============================================================
+2026-01-18 20:15:24,891 - fashion_retrieval - INFO - Test Query 1: A person in a bright yellow raincoat
+2026-01-18 20:15:24,891 - fashion_retrieval - INFO - ============================================================
+2026-01-18 20:15:24,891 - fashion_retrieval - INFO - ℹ️  Complex query detected: Enabling Attribute Re-ranking
+2026-01-18 20:15:26,206 - fashion_retrieval - INFO - 
+📊 Query Analysis:
+2026-01-18 20:15:26,206 - fashion_retrieval - INFO -   Colors detected: ['yellow', 'bright yellow']
+2026-01-18 20:15:26,207 - fashion_retrieval - INFO -   Garments detected: ['raincoat', 'a bright yellow raincoat', 'bright yellow raincoat']
+2026-01-18 20:15:26,207 - fashion_retrieval - INFO -   Scenes detected: ['a bright yellow raincoat', 'in a bright yellow raincoat', 'bright yellow raincoat']
+2026-01-18 20:15:26,207 - fashion_retrieval - INFO -   Is compositional: True
+2026-01-18 20:15:26,207 - fashion_retrieval - INFO - 
+⚖️  Fusion Weights Used:
+2026-01-18 20:15:26,207 - fashion_retrieval - INFO -   clip: 0.400
+2026-01-18 20:15:26,208 - fashion_retrieval - INFO -   color: 0.200
+2026-01-18 20:15:26,208 - fashion_retrieval - INFO -   garment: 0.200
+2026-01-18 20:15:26,208 - fashion_retrieval - INFO -   scene: 0.200
+2026-01-18 20:15:26,208 - fashion_retrieval - INFO - 
+🎯 Top 10 Results:
+2026-01-18 20:15:26,209 - fashion_retrieval - INFO - 
+  1. 59972d4827e58fd77ceac9dd7f0b42c7.jpg
+2026-01-18 20:15:26,209 - fashion_retrieval - INFO -      Score: 2.2798
+2026-01-18 20:15:26,209 - fashion_retrieval - INFO -      Colors: gray, tan, pink
+2026-01-18 20:15:26,209 - fashion_retrieval - INFO -      Garments: trench coat, long coat
+2026-01-18 20:15:26,210 - fashion_retrieval - INFO -      Scenes: street, crosswalk
+2026-01-18 20:15:26,210 - fashion_retrieval - INFO - 
+  2. 871b1533f5ecd9f4de3d7942ab3dfcc1.jpg
+2026-01-18 20:15:26,210 - fashion_retrieval - INFO -      Score: 2.2774
+2026-01-18 20:15:26,210 - fashion_retrieval - INFO -      Colors: pink, black, tan
+2026-01-18 20:15:26,211 - fashion_retrieval - INFO -      Garments: trench coat, coat
+2026-01-18 20:15:26,211 - fashion_retrieval - INFO -      Scenes: downtown, sidewalk
+2026-01-18 20:15:26,211 - fashion_retrieval - INFO - 
+  3. a53e1c400993280b2e008aebeaec46cf.jpg
+2026-01-18 20:15:26,211 - fashion_retrieval - INFO -      Score: 2.2773
+2026-01-18 20:15:26,212 - fashion_retrieval - INFO -      Colors: gray, beige, tan
+2026-01-18 20:15:26,212 - fashion_retrieval - INFO -      Garments: long coat, overcoat
+2026-01-18 20:15:26,212 - fashion_retrieval - INFO -      Scenes: sidewalk, city street
+2026-01-18 20:15:26,213 - fashion_retrieval - INFO - 
+  4. b453e64b5615e852429ff655c33e0309.jpg
+2026-01-18 20:15:26,213 - fashion_retrieval - INFO -      Score: 2.2751
+2026-01-18 20:15:26,213 - fashion_retrieval - INFO -      Colors: olive, gray, black
+2026-01-18 20:15:26,213 - fashion_retrieval - INFO -      Garments: formal skirt, casual dress
+2026-01-18 20:15:26,214 - fashion_retrieval - INFO -      Scenes: outdoor park, green space
+2026-01-18 20:15:26,214 - fashion_retrieval - INFO - 
+  5. e1dd2849fdfa4b9f6d593380c6d2f9ae.jpg
+2026-01-18 20:15:26,214 - fashion_retrieval - INFO -      Score: 2.2676
+2026-01-18 20:15:26,214 - fashion_retrieval - INFO -      Colors: silver, gray, brown
+2026-01-18 20:15:26,214 - fashion_retrieval - INFO -      Garments: coat, overcoat
+2026-01-18 20:15:26,215 - fashion_retrieval - INFO -      Scenes: urban street, downtown
+2026-01-18 20:15:26,215 - fashion_retrieval - INFO - 
+  6. ce25fc2ea56c29c024e96686099373b5.jpg
+2026-01-18 20:15:26,215 - fashion_retrieval - INFO -      Score: 2.2495
+2026-01-18 20:15:26,215 - fashion_retrieval - INFO -      Colors: black, green, olive
+2026-01-18 20:15:26,216 - fashion_retrieval - INFO -      Garments: raincoat, day dress
+2026-01-18 20:15:26,216 - fashion_retrieval - INFO -      Scenes: outdoor park, green space
+2026-01-18 20:15:26,216 - fashion_retrieval - INFO - 
+  7. 1ae9cdebd762234889e60f2c0d07a768.jpg
+2026-01-18 20:15:26,216 - fashion_retrieval - INFO -      Score: 2.2301
+2026-01-18 20:15:26,217 - fashion_retrieval - INFO -      Colors: black, beige, gray
+2026-01-18 20:15:26,217 - fashion_retrieval - INFO -      Garments: long coat, trench coat
+2026-01-18 20:15:26,217 - fashion_retrieval - INFO -      Scenes: crosswalk, sidewalk
+2026-01-18 20:15:26,217 - fashion_retrieval - INFO - 
+  8. 995d3b43753f3086a11c7ef12723631b.jpg
+2026-01-18 20:15:26,218 - fashion_retrieval - INFO -      Score: 1.8312
+2026-01-18 20:15:26,218 - fashion_retrieval - INFO -      Colors: tan, gray, beige
+2026-01-18 20:15:26,218 - fashion_retrieval - INFO -      Garments: formal skirt, casual dress
+2026-01-18 20:15:26,218 - fashion_retrieval - INFO -      Scenes: outdoor park, public garden
+2026-01-18 20:15:26,219 - fashion_retrieval - INFO - 
+  9. 4f1a11c52275858bcbcffa06085e75fa.jpg
+2026-01-18 20:15:26,219 - fashion_retrieval - INFO -      Score: 1.8307
+2026-01-18 20:15:26,219 - fashion_retrieval - INFO -      Colors: gray, tan, black
+2026-01-18 20:15:26,219 - fashion_retrieval - INFO -      Garments: chinos, casual dress
+2026-01-18 20:15:26,219 - fashion_retrieval - INFO -      Scenes: public garden, outdoor park
+2026-01-18 20:15:26,220 - fashion_retrieval - INFO - 
+  10. 362bf5c0a450f2bd363794bcd51950b8.jpg
+2026-01-18 20:15:26,220 - fashion_retrieval - INFO -      Score: 1.8299
+2026-01-18 20:15:26,220 - fashion_retrieval - INFO -      Colors: silver, gray, black
+2026-01-18 20:15:26,220 - fashion_retrieval - INFO -      Garments: formal skirt, pencil skirt
+2026-01-18 20:15:26,221 - fashion_retrieval - INFO -      Scenes: sidewalk, street
+2026-01-18 20:15:26,252 - fashion_retrieval - INFO - 
+============================================================
+2026-01-18 20:15:26,252 - fashion_retrieval - INFO - ✅ PIPELINE COMPLETE!
+2026-01-18 20:15:26,252 - fashion_retrieval - INFO - ============================================================
+2026-01-18 20:54:43,202 - fashion_retrieval - INFO - 
+============================================================
+2026-01-18 20:54:43,202 - fashion_retrieval - INFO - STEP 1: Building Index
+2026-01-18 20:54:43,203 - fashion_retrieval - INFO - ============================================================
+
+2026-01-18 20:56:37,267 - fashion_retrieval - INFO - 
+============================================================
+2026-01-18 20:56:37,267 - fashion_retrieval - INFO - STEP 1: Building Index
+2026-01-18 20:56:37,267 - fashion_retrieval - INFO - ============================================================
+
+2026-01-18 20:56:38,632 - fashion_retrieval - INFO - 
+============================================================
+2026-01-18 20:56:38,633 - fashion_retrieval - INFO - STEP 1: Building Index
+2026-01-18 20:56:38,633 - fashion_retrieval - INFO - ============================================================
+
+2026-01-18 20:57:09,561 - fashion_retrieval - INFO - ✓ Found 2076 images
+2026-01-18 20:57:09,562 - fashion_retrieval - INFO - 
+============================================================
+2026-01-18 20:57:09,562 - fashion_retrieval - INFO - Processing 2076 images...
+2026-01-18 20:57:09,562 - fashion_retrieval - INFO - ============================================================
+
+2026-01-18 20:57:09,737 - fashion_retrieval - ERROR - 
+ Error processing data\raw\003d41dd20f271d27219fe7ee6de727d.jpg: name 'Path' is not defined
+2026-01-18 20:57:09,894 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0094940c58c343b742f48ae26eb5e9fa.jpg: name 'Path' is not defined
+2026-01-18 20:57:10,041 - fashion_retrieval - ERROR - 
+ Error processing data\raw\00d5da56c02d426c4e4bf802b1888471.jpg: name 'Path' is not defined
+2026-01-18 20:57:10,176 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0146a53e12d690914995248fb6872121.jpg: name 'Path' is not defined
+2026-01-18 20:57:10,313 - fashion_retrieval - ERROR - 
+ Error processing data\raw\01590a6ba1c54b8addb3c6f876c53a2e.jpg: name 'Path' is not defined
+2026-01-18 20:57:10,442 - fashion_retrieval - ERROR - 
+ Error processing data\raw\016247873d36ee0ea830a3827107d52c.jpg: name 'Path' is not defined
+2026-01-18 20:57:10,586 - fashion_retrieval - ERROR - 
+ Error processing data\raw\01bb382de271571e209dd10cc220c7bc.jpg: name 'Path' is not defined
+2026-01-18 20:57:10,719 - fashion_retrieval - ERROR - 
+ Error processing data\raw\01c6f5ce934d00d6923c549671c36000.jpg: name 'Path' is not defined
+2026-01-18 20:57:10,845 - fashion_retrieval - ERROR - 
+ Error processing data\raw\01d0251b5bc5a41f93c86042c56258d3.jpg: name 'Path' is not defined
+2026-01-18 20:57:10,965 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0205895cfbb5348d94fda8ce32272fa5.jpg: name 'Path' is not defined
+2026-01-18 20:57:11,124 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0214748c08592468d953769e712b9d9f.jpg: name 'Path' is not defined
+2026-01-18 20:57:11,260 - fashion_retrieval - ERROR - 
+ Error processing data\raw\02147618f9a3ea98605fa68f9179c7a0.jpg: name 'Path' is not defined
+2026-01-18 20:57:11,399 - fashion_retrieval - ERROR - 
+ Error processing data\raw\02182c58daf61dc5c5c64bb112b1f826.jpg: name 'Path' is not defined
+2026-01-18 20:57:11,534 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0229bef01efc25f915374d55f59cbfdd.jpg: name 'Path' is not defined
+2026-01-18 20:57:11,664 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0231c9645ffeeef22e6f8d769cbfcb13.jpg: name 'Path' is not defined
+2026-01-18 20:57:11,792 - fashion_retrieval - ERROR - 
+ Error processing data\raw\02916664cd606bb5486353f200a475a3.jpg: name 'Path' is not defined
+2026-01-18 20:57:11,927 - fashion_retrieval - ERROR - 
+ Error processing data\raw\02f4eb537b152293cf69938553518677.jpg: name 'Path' is not defined
+2026-01-18 20:57:12,056 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0301f50a3cd73f13cd9e1125d8ef38bd.jpg: name 'Path' is not defined
+2026-01-18 20:57:12,187 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0309e132bc5fbc75f977005b2d4a79e3.jpg: name 'Path' is not defined
+2026-01-18 20:57:12,323 - fashion_retrieval - ERROR - 
+ Error processing data\raw\032590f9400693dc8cc6005f4b8dcaa9.jpg: name 'Path' is not defined
+2026-01-18 20:57:12,478 - fashion_retrieval - ERROR - 
+ Error processing data\raw\03272452a2491dbed76a28035e195d32.jpg: name 'Path' is not defined
+2026-01-18 20:57:12,621 - fashion_retrieval - ERROR - 
+ Error processing data\raw\03410de826f6272f67a3549186d82c4e.jpg: name 'Path' is not defined
+2026-01-18 20:57:12,765 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0349e23c22d9ab9a482ac3d38ec315d5.jpg: name 'Path' is not defined
+2026-01-18 20:57:12,902 - fashion_retrieval - ERROR - 
+ Error processing data\raw\03549b86fb916d9fc725d816c94d0a3c.jpg: name 'Path' is not defined
+2026-01-18 20:57:13,039 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0373fa1af9637930d36bddae6e620b6c.jpg: name 'Path' is not defined
+2026-01-18 20:57:13,172 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0374a968b65e5cdf513bd9e20af71874.jpg: name 'Path' is not defined
+2026-01-18 20:57:13,302 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0376447616a44894318f342c004da244.jpg: name 'Path' is not defined
+2026-01-18 20:57:13,432 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0388345fc60c336a3fe94085490776e7.jpg: name 'Path' is not defined
+2026-01-18 20:57:13,561 - fashion_retrieval - ERROR - 
+ Error processing data\raw\03940cb6fdf45a4844dacf11367a7ff6.jpg: name 'Path' is not defined
+2026-01-18 20:57:13,700 - fashion_retrieval - ERROR - 
+ Error processing data\raw\03bce314fb43dbf88fa378f170cccc0b.jpg: name 'Path' is not defined
+2026-01-18 20:57:13,825 - fashion_retrieval - ERROR - 
+ Error processing data\raw\03c846b699a15a82eb5ed75c61b6e95f.jpg: name 'Path' is not defined
+2026-01-18 20:57:13,950 - fashion_retrieval - ERROR - 
+ Error processing data\raw\03e74d876f65ddd114ae4809618ca710.jpg: name 'Path' is not defined
+2026-01-18 20:57:14,127 - fashion_retrieval - ERROR - 
+ Error processing data\raw\03e85172b71bb7c69b4cba22ebb34063.jpg: name 'Path' is not defined
+2026-01-18 20:57:14,287 - fashion_retrieval - ERROR - 
+ Error processing data\raw\03fc99c4deaf14724ef6277dec16b8e8.jpg: name 'Path' is not defined
+2026-01-18 20:57:14,415 - fashion_retrieval - ERROR - 
+ Error processing data\raw\04031384f4918c7176a1b20ea2537140.jpg: name 'Path' is not defined
+2026-01-18 20:57:14,555 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0420c7e0454fbbe11fadd23eb1f40d38.jpg: name 'Path' is not defined
+2026-01-18 20:57:14,692 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0434751e2f4ecc0fc5ca600f3ac680bc.jpg: name 'Path' is not defined
+2026-01-18 20:57:14,827 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0483fc73ee89d2e8c4b63aeb3af0542c.jpg: name 'Path' is not defined
+2026-01-18 20:57:14,975 - fashion_retrieval - ERROR - 
+ Error processing data\raw\050462b952d003e868fe647797e20f81.jpg: name 'Path' is not defined
+2026-01-18 20:57:15,099 - fashion_retrieval - ERROR - 
+ Error processing data\raw\053888747fe4d05e64411e7454b10881.jpg: name 'Path' is not defined
+2026-01-18 20:57:15,232 - fashion_retrieval - ERROR - 
+ Error processing data\raw\05418f9e1940094003b16deb58b3a01d.jpg: name 'Path' is not defined
+2026-01-18 20:57:15,360 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0544acba02e8776a56fde74f83633c21.jpg: name 'Path' is not defined
+2026-01-18 20:57:15,501 - fashion_retrieval - ERROR - 
+ Error processing data\raw\05488fcc74f81ae452dd55229003f58f.jpg: name 'Path' is not defined
+2026-01-18 20:57:15,638 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0548e689638d1e559179b34bc895b72f.jpg: name 'Path' is not defined
+2026-01-18 20:57:15,778 - fashion_retrieval - ERROR - 
+ Error processing data\raw\05571f180bbbaca6d3839ddb0a53f0c2.jpg: name 'Path' is not defined
+2026-01-18 20:57:15,928 - fashion_retrieval - ERROR - 
+ Error processing data\raw\05b35a8b70fc204bc6e9339bbc613d22.jpg: name 'Path' is not defined
+2026-01-18 20:57:16,098 - fashion_retrieval - ERROR - 
+ Error processing data\raw\05b5e806121325fe0b9879c18f146f39.jpg: name 'Path' is not defined
+2026-01-18 20:57:16,251 - fashion_retrieval - ERROR - 
+ Error processing data\raw\05bf5bc41fc3f6e18507faac19298273.jpg: name 'Path' is not defined
+2026-01-18 20:57:16,414 - fashion_retrieval - ERROR - 
+ Error processing data\raw\05bfc7156bc37ce44207ca814f1b3737.jpg: name 'Path' is not defined
+2026-01-18 20:57:16,590 - fashion_retrieval - ERROR - 
+ Error processing data\raw\05cbf14e6618b439185c053633831cdf.jpg: name 'Path' is not defined
+2026-01-18 20:57:16,750 - fashion_retrieval - ERROR - 
+ Error processing data\raw\05d26dad11c6bca43d37df0c16d91bc9.jpg: name 'Path' is not defined
+2026-01-18 20:57:16,903 - fashion_retrieval - ERROR - 
+ Error processing data\raw\06017096e7f209d3b23802f546830b40.jpg: name 'Path' is not defined
+2026-01-18 20:57:17,066 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0617757485dad98ded988c6e101c8bf2.jpg: name 'Path' is not defined
+2026-01-18 20:57:17,232 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0620db3b113984cd1a3a252f7664624a.jpg: name 'Path' is not defined
+2026-01-18 20:57:17,365 - fashion_retrieval - ERROR - 
+ Error processing data\raw\063053841bae486b4c35f00d361e0b2e.jpg: name 'Path' is not defined
+2026-01-18 20:57:17,526 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0634790bec8b79130ea6bdf45e1ba939.jpg: name 'Path' is not defined
+2026-01-18 20:57:17,679 - fashion_retrieval - ERROR - 
+ Error processing data\raw\069223d02dcbfbe69af905daeb7fae26.jpg: name 'Path' is not defined
+2026-01-18 20:57:17,875 - fashion_retrieval - ERROR - 
+ Error processing data\raw\07572e488f6e5e7b3868a64fbc6be1a3.jpg: name 'Path' is not defined
+2026-01-18 20:57:18,077 - fashion_retrieval - ERROR - 
+ Error processing data\raw\07729e318fa891baba6eb212220b95a6.jpg: name 'Path' is not defined
+2026-01-18 20:57:18,250 - fashion_retrieval - ERROR - 
+ Error processing data\raw\079316c57596d9c170b1fa3964ddaa6c.jpg: name 'Path' is not defined
+2026-01-18 20:57:18,482 - fashion_retrieval - ERROR - 
+ Error processing data\raw\07960daf191c39d8a5c9ea31d0967b72.jpg: name 'Path' is not defined
+2026-01-18 20:57:18,663 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0797a7c729a7da9e67258f46bf25113e.jpg: name 'Path' is not defined
+2026-01-18 20:57:18,806 - fashion_retrieval - ERROR - 
+ Error processing data\raw\08269ba6f7c1fffd539fc3c016b771e6.jpg: name 'Path' is not defined
+2026-01-18 20:57:18,936 - fashion_retrieval - ERROR - 
+ Error processing data\raw\08508eee91db9d3e8cb30d9beaa3e1a7.jpg: name 'Path' is not defined
+2026-01-18 20:57:19,081 - fashion_retrieval - ERROR - 
+ Error processing data\raw\08680e1257c83a5a603ae3ef67ef3dde.jpg: name 'Path' is not defined
+2026-01-18 20:57:19,221 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0931b17ccbb82e1eda1010f1428cc7cb.jpg: name 'Path' is not defined
+2026-01-18 20:57:19,358 - fashion_retrieval - ERROR - 
+ Error processing data\raw\09350208dbbe3f0d495c48a8ed036d8e.jpg: name 'Path' is not defined
+2026-01-18 20:57:19,505 - fashion_retrieval - ERROR - 
+ Error processing data\raw\09524f427576768e445b55a1975b9d7f.jpg: name 'Path' is not defined
+2026-01-18 20:57:19,656 - fashion_retrieval - ERROR - 
+ Error processing data\raw\09675496409c85adc6deba11277050e8.jpg: name 'Path' is not defined
+2026-01-18 20:57:19,790 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0a729bbbccaf081a46d72e5869838b45.jpg: name 'Path' is not defined
+2026-01-18 20:57:19,919 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0a72e0f76ab9b75945f5d610508f9336.jpg: name 'Path' is not defined
+2026-01-18 20:57:20,057 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0a939e0e67011aecf7195c17ecb9733c.jpg: name 'Path' is not defined
+2026-01-18 20:57:20,217 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0af8af9ca834900d3b23abda5264503a.jpg: name 'Path' is not defined
+2026-01-18 20:57:20,391 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0afb6b28d4583e470c7d0c52268272a7.jpg: name 'Path' is not defined
+2026-01-18 20:57:20,553 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0b915f1e29a2e2dacf96aacd3cb6a3cc.jpg: name 'Path' is not defined
+2026-01-18 20:57:20,700 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0ba0216e6879f8b433d0897a77cff984.jpg: name 'Path' is not defined
+2026-01-18 20:57:20,839 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0bf1bfb33db3cee939902582642ac1bb.jpg: name 'Path' is not defined
+2026-01-18 20:57:20,971 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0bf28f90d4a78251c32c37b8164d7676.jpg: name 'Path' is not defined
+2026-01-18 20:57:21,105 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0c8c7a46d30f841b2e8944acddc21b3d.jpg: name 'Path' is not defined
+2026-01-18 20:57:21,253 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0c96b29823a5372efdc370fb5a231145.jpg: name 'Path' is not defined
+2026-01-18 20:57:21,387 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0cb2351c74ccc0b38128e91d0629625d.jpg: name 'Path' is not defined
+2026-01-18 20:57:21,544 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0cd8f2955ec01a4e2678648f153b1326.jpg: name 'Path' is not defined
+2026-01-18 20:57:21,714 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0d0417d27fea871995e100907cf39cc1.jpg: name 'Path' is not defined
+2026-01-18 20:57:21,880 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0d25b761d9b146cfa820b2a7364b5bf7.jpg: name 'Path' is not defined
+2026-01-18 20:57:22,068 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0d2c936a0c0acff642b5a8c5e85fd461.jpg: name 'Path' is not defined
+2026-01-18 20:57:22,196 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0d32e0c44b492a04a01db6eaf11c7fc7.jpg: name 'Path' is not defined
+2026-01-18 20:57:22,531 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0d5d5e00e589fe5641b919179794994b.jpg: name 'Path' is not defined
+2026-01-18 20:57:22,685 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0d76d62a5c5ba8644db899b2b5698a0e.jpg: name 'Path' is not defined
+2026-01-18 20:57:22,814 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0d8803f0181d1d5e0b8d55d886a40c3d.jpg: name 'Path' is not defined
+2026-01-18 20:57:22,945 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0d98a538dcc1ae339c2e4cfd235b9509.jpg: name 'Path' is not defined
+2026-01-18 20:57:23,080 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0dbd3f116ed02e39a2136824473b47a7.jpg: name 'Path' is not defined
+2026-01-18 20:57:23,208 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0dc0c471a32907df9e6f3f85b1d1897b.jpg: name 'Path' is not defined
+2026-01-18 20:57:23,336 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0dc88e905c843875a508ffd6581170e7.jpg: name 'Path' is not defined
+2026-01-18 20:57:23,471 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0df0a300efcfc8c0e289f29c0ac8f86d.jpg: name 'Path' is not defined
+2026-01-18 20:57:23,606 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0df11a4383879c0326896fefa30e8f6c.jpg: name 'Path' is not defined
+2026-01-18 20:57:23,778 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0e0504a8c053aed418aaeebd2be60ce3.jpg: name 'Path' is not defined
+2026-01-18 20:57:23,949 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0e15c6a2a095ba20f904c78dedf3a228.jpg: name 'Path' is not defined
+2026-01-18 20:57:24,093 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0e4af4261e722e382d3999857e51870c.jpg: name 'Path' is not defined
+2026-01-18 20:57:24,220 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0e4ccb9ca5528265c8330c043604b0c7.jpg: name 'Path' is not defined
+2026-01-18 20:57:24,357 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0e5ecf98835cbd0dddd1b45c788005c3.jpg: name 'Path' is not defined
+2026-01-18 20:57:24,482 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0e9775fcd1a3b1d95aed773e684b3f49.jpg: name 'Path' is not defined
+2026-01-18 20:57:24,612 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0ead2ad663e32a0f867c31895b1ade76.jpg: name 'Path' is not defined
+2026-01-18 20:57:24,744 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0efe12abab123c39757888e9c8f9d145.jpg: name 'Path' is not defined
+2026-01-18 20:57:24,903 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0f3444a07e3cc8d310ab33907d96ba1f.jpg: name 'Path' is not defined
+2026-01-18 20:57:25,032 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0f49ff48b5b25933db0669e9077b5cd3.jpg: name 'Path' is not defined
+2026-01-18 20:57:25,161 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0f4d15d0aed8a66085298f73a759f27b.jpg: name 'Path' is not defined
+2026-01-18 20:57:25,286 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0fd47405bde971ea795259fa8790ef40.jpg: name 'Path' is not defined
+2026-01-18 20:57:25,413 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0ff1ad48b959df32af38f42cef26d361.jpg: name 'Path' is not defined
+2026-01-18 20:57:25,538 - fashion_retrieval - ERROR - 
+ Error processing data\raw\0ff21e64a5480e252e8dbd257f72032e.jpg: name 'Path' is not defined
+2026-01-18 20:57:25,667 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1003a917c17bc42f9de565905e976d7a.jpg: name 'Path' is not defined
+2026-01-18 20:57:25,799 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1050585bd1104969bc175e8bcdfd5311.jpg: name 'Path' is not defined
+2026-01-18 20:57:25,958 - fashion_retrieval - ERROR - 
+ Error processing data\raw\106d8791ebee7af873405f2bdcb9c54f.jpg: name 'Path' is not defined
+2026-01-18 20:57:26,090 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1096d7f19d17bc21e9a56f2ca44740c6.jpg: name 'Path' is not defined
+2026-01-18 20:57:26,222 - fashion_retrieval - ERROR - 
+ Error processing data\raw\110884e327a094ad86358ece522dddff.jpg: name 'Path' is not defined
+2026-01-18 20:57:26,351 - fashion_retrieval - ERROR - 
+ Error processing data\raw\112a9c9b9c7a97f3f632b2ec7fd064e5.jpg: name 'Path' is not defined
+2026-01-18 20:57:26,493 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1133c832005b9620ab89eee82ba1c4a2.jpg: name 'Path' is not defined
+2026-01-18 20:57:26,627 - fashion_retrieval - ERROR - 
+ Error processing data\raw\113dcdc48d04076928f65df1bc941917.jpg: name 'Path' is not defined
+2026-01-18 20:57:26,758 - fashion_retrieval - ERROR - 
+ Error processing data\raw\114411003923c0d186c6a6d51009424f.jpg: name 'Path' is not defined
+2026-01-18 20:57:26,893 - fashion_retrieval - ERROR - 
+ Error processing data\raw\11669ac85fec72431334f523bc53c45f.jpg: name 'Path' is not defined
+2026-01-18 20:57:27,037 - fashion_retrieval - ERROR - 
+ Error processing data\raw\116c0fd0c6d963e7b68e7af47c4e8cc7.jpg: name 'Path' is not defined
+2026-01-18 20:57:27,170 - fashion_retrieval - ERROR - 
+ Error processing data\raw\118f0ead73f859663c81b5f86f5d5e3a.jpg: name 'Path' is not defined
+2026-01-18 20:57:27,304 - fashion_retrieval - ERROR - 
+ Error processing data\raw\119b337ea431d7795d5e60ad6b5a71a5.jpg: name 'Path' is not defined
+2026-01-18 20:57:27,441 - fashion_retrieval - ERROR - 
+ Error processing data\raw\123318217b814f567b34b30bc843680f.jpg: name 'Path' is not defined
+2026-01-18 20:57:27,569 - fashion_retrieval - ERROR - 
+ Error processing data\raw\12416f707a0428adc08bc899bc6d84c8.jpg: name 'Path' is not defined
+2026-01-18 20:57:27,698 - fashion_retrieval - ERROR - 
+ Error processing data\raw\124d454fca78e66b8358424f05bfe4a1.jpg: name 'Path' is not defined
+2026-01-18 20:57:27,846 - fashion_retrieval - ERROR - 
+ Error processing data\raw\124dc5471306edcadc0d89bfc7353939.jpg: name 'Path' is not defined
+2026-01-18 20:57:27,987 - fashion_retrieval - ERROR - 
+ Error processing data\raw\126c42860c165034e8e46b17fa76cbf9.jpg: name 'Path' is not defined
+2026-01-18 20:57:28,122 - fashion_retrieval - ERROR - 
+ Error processing data\raw\128e563f37864265333bc9a3de7dccc6.jpg: name 'Path' is not defined
+2026-01-18 20:57:28,266 - fashion_retrieval - ERROR - 
+ Error processing data\raw\129641fb38cde5b4c002aada6c0f68f5.jpg: name 'Path' is not defined
+2026-01-18 20:57:28,396 - fashion_retrieval - ERROR - 
+ Error processing data\raw\129e532450000ba8ffceb3b76fd9e617.jpg: name 'Path' is not defined
+2026-01-18 20:57:28,545 - fashion_retrieval - ERROR - 
+ Error processing data\raw\136ac2a820e9718e52835f815428be82.jpg: name 'Path' is not defined
+2026-01-18 20:57:28,676 - fashion_retrieval - ERROR - 
+ Error processing data\raw\13714a1c52d443ebeb3357cb3c6b5285.jpg: name 'Path' is not defined
+2026-01-18 20:57:28,806 - fashion_retrieval - ERROR - 
+ Error processing data\raw\137d35208367f5a6aaf358dee6b39d14.jpg: name 'Path' is not defined
+2026-01-18 20:57:28,993 - fashion_retrieval - ERROR - 
+ Error processing data\raw\138d25e69ff93fda0643ced2fa7feafb.jpg: name 'Path' is not defined
+2026-01-18 20:57:29,129 - fashion_retrieval - ERROR - 
+ Error processing data\raw\14017b6a1e8a3a5c86b94f8e8fbeb5b0.jpg: name 'Path' is not defined
+2026-01-18 20:57:29,314 - fashion_retrieval - ERROR - 
+ Error processing data\raw\14025b915e71064e49244d221f25eec4.jpg: name 'Path' is not defined
+2026-01-18 20:57:29,477 - fashion_retrieval - ERROR - 
+ Error processing data\raw\140c28b31fcda10211a81f039e8f6c8e.jpg: name 'Path' is not defined
+2026-01-18 20:57:29,615 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1415fdce536f372824f1ce32c7f153fd.jpg: name 'Path' is not defined
+2026-01-18 20:57:29,776 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1457a4320d40a1483d46288640ea7ddc.jpg: name 'Path' is not defined
+2026-01-18 20:57:29,935 - fashion_retrieval - ERROR - 
+ Error processing data\raw\14918e2a402f109c12da34aa2a4fce45.jpg: name 'Path' is not defined
+2026-01-18 20:57:30,102 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1502267228cff79fdeb844edbe000f4f.jpg: name 'Path' is not defined
+2026-01-18 20:57:30,237 - fashion_retrieval - ERROR - 
+ Error processing data\raw\15154e4e279813e4f7d40fd88a578810.jpg: name 'Path' is not defined
+2026-01-18 20:57:30,367 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1549674bd629241190c29697b8564b57.jpg: name 'Path' is not defined
+2026-01-18 20:57:30,541 - fashion_retrieval - ERROR - 
+ Error processing data\raw\155079365-handsome-indian-young-boy-wearing-white-shirt-and-red-tie.jpg: name 'Path' is not defined
+2026-01-18 20:57:30,680 - fashion_retrieval - ERROR - 
+ Error processing data\raw\155ea684f404a9b299b20ae06a64b813.jpg: name 'Path' is not defined
+2026-01-18 20:57:30,842 - fashion_retrieval - ERROR - 
+ Error processing data\raw\15620ac788726611486d881df27a36b0.jpg: name 'Path' is not defined
+2026-01-18 20:57:30,977 - fashion_retrieval - ERROR - 
+ Error processing data\raw\15910ed48cbfceeff0e0b808694b732c.jpg: name 'Path' is not defined
+2026-01-18 20:57:31,116 - fashion_retrieval - ERROR - 
+ Error processing data\raw\162547986c33e122baa993ee9e02230d.jpg: name 'Path' is not defined
+2026-01-18 20:57:31,267 - fashion_retrieval - ERROR - 
+ Error processing data\raw\163316c8653449a9af4e731ac3aedaf7.jpg: name 'Path' is not defined
+2026-01-18 20:57:31,431 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1639f0d883677382b8d728af247c834a.jpg: name 'Path' is not defined
+2026-01-18 20:57:31,591 - fashion_retrieval - ERROR - 
+ Error processing data\raw\163f6acca8041b188a22b38e496bb148.jpg: name 'Path' is not defined
+2026-01-18 20:57:31,749 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1646a045268fa9848e2dad851f740452.jpg: name 'Path' is not defined
+2026-01-18 20:57:31,897 - fashion_retrieval - ERROR - 
+ Error processing data\raw\164eabcec362011d921a960e691e182a.jpg: name 'Path' is not defined
+2026-01-18 20:57:32,044 - fashion_retrieval - ERROR - 
+ Error processing data\raw\165b0195ff6dc62096d0c49c680407ca.jpg: name 'Path' is not defined
+2026-01-18 20:57:32,173 - fashion_retrieval - ERROR - 
+ Error processing data\raw\165d068e46d8eaa97392d5db91620721.jpg: name 'Path' is not defined
+2026-01-18 20:57:32,309 - fashion_retrieval - ERROR - 
+ Error processing data\raw\165fc69c577be6c18128e057487cf489.jpg: name 'Path' is not defined
+2026-01-18 20:57:32,466 - fashion_retrieval - ERROR - 
+ Error processing data\raw\166db2094576d8c91dd7b367e695e9a2.jpg: name 'Path' is not defined
+2026-01-18 20:57:32,613 - fashion_retrieval - ERROR - 
+ Error processing data\raw\16860b6e63ea60d49f754ed7424e8009.jpg: name 'Path' is not defined
+2026-01-18 20:57:32,771 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1687cf1a76e63aeaacd18ecca3639bbc.jpg: name 'Path' is not defined
+2026-01-18 20:57:33,070 - fashion_retrieval - ERROR - 
+ Error processing data\raw\16969a96d6b8f1c5f2f74805364bc19a.jpg: name 'Path' is not defined
+2026-01-18 20:57:33,226 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1711df13cdf600a6aef7faf3d9e81d02.jpg: name 'Path' is not defined
+2026-01-18 20:57:33,399 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1731c6223212d540b428bf1cb1183876.jpg: name 'Path' is not defined
+2026-01-18 20:57:33,576 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1744183e925250327f807fdb15907f6a.jpg: name 'Path' is not defined
+2026-01-18 20:57:33,730 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1752623f114724c401600b3f4565b631.jpg: name 'Path' is not defined
+2026-01-18 20:57:33,881 - fashion_retrieval - ERROR - 
+ Error processing data\raw\176c976ed8edcf21eebef9de662adc18.jpg: name 'Path' is not defined
+2026-01-18 20:57:34,040 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1780ac0ddbb3e96d5eb6fcb97468c878.jpg: name 'Path' is not defined
+2026-01-18 20:57:34,183 - fashion_retrieval - ERROR - 
+ Error processing data\raw\17903da1009ca140ab8a3c081bf263c4.jpg: name 'Path' is not defined
+2026-01-18 20:57:34,316 - fashion_retrieval - ERROR - 
+ Error processing data\raw\17952d2e204c49ddd4fcd63eef60480c.jpg: name 'Path' is not defined
+2026-01-18 20:57:34,446 - fashion_retrieval - ERROR - 
+ Error processing data\raw\18065324fae0dce63b803e6a30cc4e2b.jpg: name 'Path' is not defined
+2026-01-18 20:57:34,578 - fashion_retrieval - ERROR - 
+ Error processing data\raw\181629f057c2592c26657b0b02c4a3be.jpg: name 'Path' is not defined
+2026-01-18 20:57:34,708 - fashion_retrieval - ERROR - 
+ Error processing data\raw\183bece374cfc3d8e7bb8c15089eb382.jpg: name 'Path' is not defined
+2026-01-18 20:57:34,837 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1851ff9e83b22cbaa4fac6880ddbdc66.jpg: name 'Path' is not defined
+2026-01-18 20:57:34,969 - fashion_retrieval - ERROR - 
+ Error processing data\raw\188da5346a4b33a8f495bdc6fd5f1b87.jpg: name 'Path' is not defined
+2026-01-18 20:57:35,099 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1894401d7f537c348a237a8043630521.jpg: name 'Path' is not defined
+2026-01-18 20:57:35,227 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1918cddd5d05e007637c1b635eb683f5.jpg: name 'Path' is not defined
+2026-01-18 20:57:35,358 - fashion_retrieval - ERROR - 
+ Error processing data\raw\193e590e5a6b1150b19ef0e42a6155f9.jpg: name 'Path' is not defined
+2026-01-18 20:57:35,483 - fashion_retrieval - ERROR - 
+ Error processing data\raw\19465ac5d2d2d07cd7524188666533df.jpg: name 'Path' is not defined
+2026-01-18 20:57:35,654 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1990db0a5b2ddcee0b5b44a6186ff473.jpg: name 'Path' is not defined
+2026-01-18 20:57:35,779 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1993511c0af4253eb5ff0d495ad2b9db.jpg: name 'Path' is not defined
+2026-01-18 20:57:35,909 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1a0e7426f078931ec3f3c45c2855f7ba.jpg: name 'Path' is not defined
+2026-01-18 20:57:36,082 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1a2e249b43d0234652e1e1afe9fcef61.jpg: name 'Path' is not defined
+2026-01-18 20:57:36,292 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1a3b75fa84d23692f516ad00fe2ae2fc.jpg: name 'Path' is not defined
+2026-01-18 20:57:36,511 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1a8651c1d8e5a8a7a546a303a38eea47.jpg: name 'Path' is not defined
+2026-01-18 20:57:36,671 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1ad178c4bf17f2073b57f2a88daf272d.jpg: name 'Path' is not defined
+2026-01-18 20:57:36,799 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1ae9cdebd762234889e60f2c0d07a768.jpg: name 'Path' is not defined
+2026-01-18 20:57:36,936 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1b84aa501066599f1332ff4551d9a1b3.jpg: name 'Path' is not defined
+2026-01-18 20:57:37,069 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1b8c03a610d653da2492f3c8235e36a5.jpg: name 'Path' is not defined
+2026-01-18 20:57:37,211 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1b9b2acc6ad9a65f79d002a9e5eac49b.jpg: name 'Path' is not defined
+2026-01-18 20:57:37,371 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1baaebafd3053581dff3570b50c6af97.jpg: name 'Path' is not defined
+2026-01-18 20:57:37,557 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1bab167f6bd1af6e5e9bced3ba73284e.jpg: name 'Path' is not defined
+2026-01-18 20:57:37,703 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1bcd0a03c37992db3d967692b0f7faea.jpg: name 'Path' is not defined
+2026-01-18 20:57:37,862 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1bf4967e0da8ced7325d1e27e90927f0.jpg: name 'Path' is not defined
+2026-01-18 20:57:38,063 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1bfa6210a0974e1218e74f6c7d8258ca.jpg: name 'Path' is not defined
+2026-01-18 20:57:38,236 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1c0a1d443043d8797290780b5680d4a4.jpg: name 'Path' is not defined
+2026-01-18 20:57:38,406 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1c1484bd95e170ad133660f8a69419b1.jpg: name 'Path' is not defined
+2026-01-18 20:57:38,568 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1c1b439e448879f805e8c827605ec96b.jpg: name 'Path' is not defined
+2026-01-18 20:57:38,704 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1c1cf4a88aba7c676f8563907b1154ea.jpg: name 'Path' is not defined
+2026-01-18 20:57:38,849 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1c1d3b5d3c768ad58572eae16443c824.jpg: name 'Path' is not defined
+2026-01-18 20:57:39,003 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1c2246e2c36d4b6cc6307b7c3ee8c0eb.jpg: name 'Path' is not defined
+2026-01-18 20:57:39,154 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1c34cbdd4fdf7c468f781d1f1cbb4609.jpg: name 'Path' is not defined
+2026-01-18 20:57:39,303 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1c38b8f375f1d61b3daad93040447b1b.jpg: name 'Path' is not defined
+2026-01-18 20:57:39,449 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1c3c10b47057091f4b524f0128280b51.jpg: name 'Path' is not defined
+2026-01-18 20:57:39,579 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1c46fbd003ae2b380143c36d06bd2c72.jpg: name 'Path' is not defined
+2026-01-18 20:57:39,793 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1ca6fb4b937bb1f34797d3315266a546.jpg: name 'Path' is not defined
+2026-01-18 20:57:40,079 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1d03c2c0dceb5d5edafc7ad4e5de34ec.jpg: name 'Path' is not defined
+2026-01-18 20:57:40,313 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1d17dd8bb84bb923966d365e5d8ad174.jpg: name 'Path' is not defined
+2026-01-18 20:57:40,540 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1d28435f6cabcd0654ab3b4f11c15c0c.jpg: name 'Path' is not defined
+2026-01-18 20:57:40,702 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1d674548eeae391259da02e21fac484c.jpg: name 'Path' is not defined
+2026-01-18 20:57:40,853 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1d8a81f9cf6f5f3e66f65293408399ed.jpg: name 'Path' is not defined
+2026-01-18 20:57:41,011 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1d964d0eb4974ad6f5b8ed499474f350.jpg: name 'Path' is not defined
+2026-01-18 20:57:41,154 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1dce1d64fcf0ed0ceacb920a179cc3db.jpg: name 'Path' is not defined
+2026-01-18 20:57:41,305 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1dd0140361672b4ebd9b54aab7ba71ef.jpg: name 'Path' is not defined
+2026-01-18 20:57:41,477 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1dfe4eb7f1f6a38b6871f0f166d1f4e4.jpg: name 'Path' is not defined
+2026-01-18 20:57:41,627 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1e54ccbc575eac627de68b221913fc52.jpg: name 'Path' is not defined
+2026-01-18 20:57:41,774 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1e7af28b45470cbbf44bbc07b716b1d1.jpg: name 'Path' is not defined
+2026-01-18 20:57:41,919 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1e7e2c402bc778bc18e941c333d46368.jpg: name 'Path' is not defined
+2026-01-18 20:57:42,056 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1ed3961d0e80c5b7b8b09f9c1ce0662c.jpg: name 'Path' is not defined
+2026-01-18 20:57:42,195 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1ee26a858200fa98bef04c950dad233a.jpg: name 'Path' is not defined
+2026-01-18 20:57:42,509 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1eec96671e8a5fb35bf350d5e7196bda.jpg: name 'Path' is not defined
+2026-01-18 20:57:42,638 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1f15cf1288966b01ed5bcfb139ed96fc.jpg: name 'Path' is not defined
+2026-01-18 20:57:42,811 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1f4c2d7ddfaa4d7c5a88df6d04ec0512.jpg: name 'Path' is not defined
+2026-01-18 20:57:42,941 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1f6b96f7f298903a77fa747ea4fe8840.jpg: name 'Path' is not defined
+2026-01-18 20:57:43,069 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1fc67fcf2301de07315b2b1eae7d1e87.jpg: name 'Path' is not defined
+2026-01-18 20:57:43,201 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1fd2dcf403acd7fb4f9d6b2604467c15.jpg: name 'Path' is not defined
+2026-01-18 20:57:43,336 - fashion_retrieval - ERROR - 
+ Error processing data\raw\1fd63362ced55967a97a324928583339.jpg: name 'Path' is not defined
+2026-01-18 20:57:43,472 - fashion_retrieval - ERROR - 
+ Error processing data\raw\200801ffb2c44d46b94454f1b6a278a6.jpg: name 'Path' is not defined
+2026-01-18 20:57:43,610 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2012cd2a43f402afc464573883246bd9.jpg: name 'Path' is not defined
+2026-01-18 20:57:43,743 - fashion_retrieval - ERROR - 
+ Error processing data\raw\201a00e2624e8befe10480933714e626.jpg: name 'Path' is not defined
+2026-01-18 20:57:43,879 - fashion_retrieval - ERROR - 
+ Error processing data\raw\201ed1164d3ebb6acaa419e5f8328368.jpg: name 'Path' is not defined
+2026-01-18 20:57:44,008 - fashion_retrieval - ERROR - 
+ Error processing data\raw\203bd39accd1e4dee2ce379c561c8ca2.jpg: name 'Path' is not defined
+2026-01-18 20:57:44,148 - fashion_retrieval - ERROR - 
+ Error processing data\raw\205d6dceb7b3a14177190eb660dc0e2b.jpg: name 'Path' is not defined
+2026-01-18 20:57:44,274 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2064125f44bafe6b58a8b62750c96e5e.jpg: name 'Path' is not defined
+2026-01-18 20:57:44,400 - fashion_retrieval - ERROR - 
+ Error processing data\raw\209cbf60a0afd6931578067a9856678a.jpg: name 'Path' is not defined
+2026-01-18 20:57:44,538 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2124c532db8efdacf127013fbd5461e7.jpg: name 'Path' is not defined
+2026-01-18 20:57:44,705 - fashion_retrieval - ERROR - 
+ Error processing data\raw\215ae3c02ff82ed943816a80204d7a41.jpg: name 'Path' is not defined
+2026-01-18 20:57:44,830 - fashion_retrieval - ERROR - 
+ Error processing data\raw\216d717f1360e765cdc3e6d4321b2270.jpg: name 'Path' is not defined
+2026-01-18 20:57:44,958 - fashion_retrieval - ERROR - 
+ Error processing data\raw\216e060e6cf3138f62aaa7f0efd5fb09.jpg: name 'Path' is not defined
+2026-01-18 20:57:45,090 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2171b137ca967fb6540ce50fc824aaa4.jpg: name 'Path' is not defined
+2026-01-18 20:57:45,223 - fashion_retrieval - ERROR - 
+ Error processing data\raw\218f45327eead3c64b19e3ddee2ec238.jpg: name 'Path' is not defined
+2026-01-18 20:57:45,360 - fashion_retrieval - ERROR - 
+ Error processing data\raw\219a6c846e208bbad39f71ddab96408a.jpg: name 'Path' is not defined
+2026-01-18 20:57:45,495 - fashion_retrieval - ERROR - 
+ Error processing data\raw\219e070fdf1a306f0f229db82cd46c5c.jpg: name 'Path' is not defined
+2026-01-18 20:57:45,625 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2207cd8dd49a5ee0f3e7903871272640.jpg: name 'Path' is not defined
+2026-01-18 20:57:45,750 - fashion_retrieval - ERROR - 
+ Error processing data\raw\226e38da6ac6142912a6a8c61bafddb6.jpg: name 'Path' is not defined
+2026-01-18 20:57:45,882 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2276c9df229065fb827c8254efae9c15.jpg: name 'Path' is not defined
+2026-01-18 20:57:46,013 - fashion_retrieval - ERROR - 
+ Error processing data\raw\227a61b64bca65ba3a3247a253d05fb1.jpg: name 'Path' is not defined
+2026-01-18 20:57:46,144 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2288c53c83faab62d8fbf73b35d1ebb8.jpg: name 'Path' is not defined
+2026-01-18 20:57:46,278 - fashion_retrieval - ERROR - 
+ Error processing data\raw\228d6f335e7c88d524d4bd4c8bdebd1d.jpg: name 'Path' is not defined
+2026-01-18 20:57:46,447 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2294520d7ec0bda53fb0e77af9560e05.jpg: name 'Path' is not defined
+2026-01-18 20:57:46,582 - fashion_retrieval - ERROR - 
+ Error processing data\raw\229f39b7fdd1baf571f9e757ca8b7982.jpg: name 'Path' is not defined
+2026-01-18 20:57:46,722 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2310f7efadf3407b64a2a4532a1d2ee7.jpg: name 'Path' is not defined
+2026-01-18 20:57:46,863 - fashion_retrieval - ERROR - 
+ Error processing data\raw\232031788c76d2cc08217c74d1caf8bb.jpg: name 'Path' is not defined
+2026-01-18 20:57:47,001 - fashion_retrieval - ERROR - 
+ Error processing data\raw\234edbb6b3cb898efe2aa8ad2d9e9264.jpg: name 'Path' is not defined
+2026-01-18 20:57:47,132 - fashion_retrieval - ERROR - 
+ Error processing data\raw\236d3495722c76ba66121bdd9dc92d37.jpg: name 'Path' is not defined
+2026-01-18 20:57:47,276 - fashion_retrieval - ERROR - 
+ Error processing data\raw\23791581c54542f3e761b0ff28c38e00.jpg: name 'Path' is not defined
+2026-01-18 20:57:47,406 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2391a0988f649d929bf815a4e0524453.jpg: name 'Path' is not defined
+2026-01-18 20:57:47,537 - fashion_retrieval - ERROR - 
+ Error processing data\raw\240bd00f12d515296843b780abb6ffc7.jpg: name 'Path' is not defined
+2026-01-18 20:57:47,661 - fashion_retrieval - ERROR - 
+ Error processing data\raw\247ac98e288609e616f1dde9aede4e94.jpg: name 'Path' is not defined
+2026-01-18 20:57:47,792 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2546dc0cd67b764a0969782c122732c0.jpg: name 'Path' is not defined
+2026-01-18 20:57:47,924 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2551e47761b4dec0095aa9d1529385e0.jpg: name 'Path' is not defined
+2026-01-18 20:57:48,061 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2555992e6dd494b54500f128cfcc1881.jpg: name 'Path' is not defined
+2026-01-18 20:57:48,229 - fashion_retrieval - ERROR - 
+ Error processing data\raw\255603898dc1fe398ac79dc3e3fcaf46.jpg: name 'Path' is not defined
+2026-01-18 20:57:48,362 - fashion_retrieval - ERROR - 
+ Error processing data\raw\255989bbfb631c18a52e16690eae4545.jpg: name 'Path' is not defined
+2026-01-18 20:57:48,496 - fashion_retrieval - ERROR - 
+ Error processing data\raw\26168da8556dab9641084df526c39ced.jpg: name 'Path' is not defined
+2026-01-18 20:57:48,604 - fashion_retrieval - ERROR - 
+ Error processing data\raw\263b6dd877a80699f43aef905d7ea37e.jpg: name 'Path' is not defined
+2026-01-18 20:57:48,733 - fashion_retrieval - ERROR - 
+ Error processing data\raw\263bae0aa4d51756fe2d1fb42bb87802.jpg: name 'Path' is not defined
+2026-01-18 20:57:48,864 - fashion_retrieval - ERROR - 
+ Error processing data\raw\265a6f3aee35666b2f62752c49f6dd63.jpg: name 'Path' is not defined
+2026-01-18 20:57:48,996 - fashion_retrieval - ERROR - 
+ Error processing data\raw\26723185fa9f1969f6e03e2cf9e5e039.jpg: name 'Path' is not defined
+2026-01-18 20:57:49,131 - fashion_retrieval - ERROR - 
+ Error processing data\raw\26759016fd26e02207463675219f7fef.jpg: name 'Path' is not defined
+2026-01-18 20:57:49,265 - fashion_retrieval - ERROR - 
+ Error processing data\raw\269611aa278ac123b0a5809b2013c383.jpg: name 'Path' is not defined
+2026-01-18 20:57:49,395 - fashion_retrieval - ERROR - 
+ Error processing data\raw\27023eed1274dd51e91924ea631b1ab1.jpg: name 'Path' is not defined
+2026-01-18 20:57:49,557 - fashion_retrieval - ERROR - 
+ Error processing data\raw\271b372616db8015c4d4977b04b5027a.jpg: name 'Path' is not defined
+2026-01-18 20:57:49,714 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2745b607f99c51112aba66b10c120ca2.jpg: name 'Path' is not defined
+2026-01-18 20:57:49,856 - fashion_retrieval - ERROR - 
+ Error processing data\raw\277b370ed29d43317e5ad2c9cfee3f2e.jpg: name 'Path' is not defined
+2026-01-18 20:57:50,002 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2782426d99e5e0ab2555378e29953c9e.jpg: name 'Path' is not defined
+2026-01-18 20:57:50,164 - fashion_retrieval - ERROR - 
+ Error processing data\raw\280a76210b66ab30456070b315ac81e7.jpg: name 'Path' is not defined
+2026-01-18 20:57:50,311 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2818590a72f2e4382b89743c4e1b5c9b.jpg: name 'Path' is not defined
+2026-01-18 20:57:50,446 - fashion_retrieval - ERROR - 
+ Error processing data\raw\286c8e22e0b7b118aeb05c824dfc3910.jpg: name 'Path' is not defined
+2026-01-18 20:57:50,571 - fashion_retrieval - ERROR - 
+ Error processing data\raw\28772cc5485a105f5bf8bfafedfc66b6.jpg: name 'Path' is not defined
+2026-01-18 20:57:50,717 - fashion_retrieval - ERROR - 
+ Error processing data\raw\287ececfbce9ad3de25e618f3ddfc21a.jpg: name 'Path' is not defined
+2026-01-18 20:57:50,860 - fashion_retrieval - ERROR - 
+ Error processing data\raw\28864959bd569098ab46022cc851b1dd.jpg: name 'Path' is not defined
+2026-01-18 20:57:51,010 - fashion_retrieval - ERROR - 
+ Error processing data\raw\289236c117e289c12d6c57e2cb4ce427.jpg: name 'Path' is not defined
+2026-01-18 20:57:51,155 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2892b3605dc467bdc1b421a6e69400eb.jpg: name 'Path' is not defined
+2026-01-18 20:57:51,341 - fashion_retrieval - ERROR - 
+ Error processing data\raw\28940c15bd7a508d674774089fc73674.jpg: name 'Path' is not defined
+2026-01-18 20:57:51,576 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2898c07ef740e24cb05c068998a9e23d.jpg: name 'Path' is not defined
+2026-01-18 20:57:51,742 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2907c60baee70f30b349de950935bdd4.jpg: name 'Path' is not defined
+2026-01-18 20:57:51,913 - fashion_retrieval - ERROR - 
+ Error processing data\raw\290c05efb25025640ba2ff706d7e8f88.jpg: name 'Path' is not defined
+2026-01-18 20:57:52,058 - fashion_retrieval - ERROR - 
+ Error processing data\raw\291c696bac30169082d710652df75e9f.jpg: name 'Path' is not defined
+2026-01-18 20:57:52,208 - fashion_retrieval - ERROR - 
+ Error processing data\raw\292ebab1191c45465fddac3b9612f4f2.jpg: name 'Path' is not defined
+2026-01-18 20:57:52,395 - fashion_retrieval - ERROR - 
+ Error processing data\raw\293b4500aa1c923090943fa9afd5f8f9.jpg: name 'Path' is not defined
+2026-01-18 20:57:52,599 - fashion_retrieval - ERROR - 
+ Error processing data\raw\29548961c91191c37d36a5fa7a991d5d.jpg: name 'Path' is not defined
+2026-01-18 20:57:52,766 - fashion_retrieval - ERROR - 
+ Error processing data\raw\296dee66e4ef01a6453434cdd7062b25.jpg: name 'Path' is not defined
+2026-01-18 20:57:52,926 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2987586fbbd50d198da2ca38e532bb7f.jpg: name 'Path' is not defined
+2026-01-18 20:57:53,063 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2a191fe07d0c2f63c5192d7effcec0c1.jpg: name 'Path' is not defined
+2026-01-18 20:57:53,215 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2a1a02af6a6b8a64729f8187123514a0.jpg: name 'Path' is not defined
+2026-01-18 20:57:53,371 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2a2d4fb6f4a74ccbef9eb5410859cea8.jpg: name 'Path' is not defined
+2026-01-18 20:57:53,504 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2a8546bee24b4296775bb779dec46564.jpg: name 'Path' is not defined
+2026-01-18 20:57:53,661 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2aa229d7589a06e59c4eb1f05162f9ab.jpg: name 'Path' is not defined
+2026-01-18 20:57:53,817 - fashion_retrieval - ERROR - 
+ Error processing data\raw\2ac255bebc4b36a41bc44cbe5cff824a.jpg: name 'Path' is not defined
+2026-01-18 23:11:49,853 - fashion_retrieval - INFO - Loading search engine...
+2026-01-18 23:11:49,933 - fashion_retrieval - INFO - ✓ Loaded FAISS index: 2076 vectors
+2026-01-18 23:11:49,985 - fashion_retrieval - INFO - ✓ Loaded metadata: 2076 images
+2026-01-18 23:11:53,438 - fashion_retrieval - INFO - Loading DistilBERT model for smart attribute extraction...
+2026-01-18 23:11:54,074 - fashion_retrieval - INFO - ✓ Search engine ready!
+

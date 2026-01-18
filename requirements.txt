@@ -1,0 +1,29 @@
+# Core ML
+torch 
+torchvision 
+transformers 
+open-clip-torch 
+clip 
+
+# Vision Processing
+pillow 
+opencv-python 
+scikit-image 
+scikit-learn 
+
+# Vector Storage
+faiss-cpu 
+
+
+# NLP
+spacy 
+nltk 
+
+# Utils
+numpy 
+pandas 
+tqdm 
+matplotlib 
+seaborn 
+
+timm  # Pre-trained vision models 

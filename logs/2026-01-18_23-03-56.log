@@ -1,0 +1,188 @@
+2026-01-18 23:03:57,288 - fashion_retrieval - INFO - Loading search engine...
+2026-01-18 23:03:57,294 - fashion_retrieval - INFO - ✓ Loaded FAISS index: 2076 vectors
+2026-01-18 23:03:57,319 - fashion_retrieval - INFO - ✓ Loaded metadata: 2076 images
+2026-01-18 23:04:30,244 - fashion_retrieval - INFO - Loading DistilBERT model for smart attribute extraction...
+2026-01-18 23:04:36,234 - fashion_retrieval - INFO - ✓ Search engine ready!
+
+2026-01-18 23:05:46,704 - fashion_retrieval - INFO - 
+🔍 Query Processing:
+2026-01-18 23:05:46,705 - fashion_retrieval - INFO -   Raw: A person in a bright yellow raincoat.
+2026-01-18 23:05:46,716 - fashion_retrieval - INFO -   Parsed colors: ['yellow', 'bright yellow']
+2026-01-18 23:05:46,716 - fashion_retrieval - INFO -   Parsed garments: ['a person in a bright yellow raincoat', 'bright yellow raincoat', 'raincoat', 'a bright yellow raincoat']
+2026-01-18 23:05:46,717 - fashion_retrieval - INFO -   Parsed scenes: ['in a bright yellow raincoat', 'a bright yellow raincoat', 'a person in a bright yellow raincoat', 'bright yellow raincoat']
+2026-01-18 23:05:46,717 - fashion_retrieval - INFO - 
+Weight allocation:
+  clip: 40.00% (global semantic understanding)
+  color: 20.00% (colors: ['yellow', 'bright yellow'])
+  garment: 20.00% (garments: ['a person in a bright yellow raincoat', 'bright yellow raincoat', 'raincoat', 'a bright yellow raincoat'])
+  scene: 20.00% (scenes: ['in a bright yellow raincoat', 'a bright yellow raincoat', 'a person in a bright yellow raincoat', 'bright yellow raincoat'])
+
+2026-01-18 23:06:10,010 - fashion_retrieval - INFO - 
+🔍 Query Processing:
+2026-01-18 23:06:10,011 - fashion_retrieval - INFO -   Raw: A person in a bright yellow raincoat
+2026-01-18 23:06:10,012 - fashion_retrieval - INFO -   Parsed colors: ['yellow', 'bright yellow']
+2026-01-18 23:06:10,012 - fashion_retrieval - INFO -   Parsed garments: ['raincoat', 'a bright yellow raincoat', 'bright yellow raincoat']
+2026-01-18 23:06:10,013 - fashion_retrieval - INFO -   Parsed scenes: ['a bright yellow raincoat', 'in a bright yellow raincoat', 'bright yellow raincoat']
+2026-01-18 23:06:10,014 - fashion_retrieval - INFO - 
+Weight allocation:
+  clip: 40.00% (global semantic understanding)
+  color: 20.00% (colors: ['yellow', 'bright yellow'])
+  garment: 20.00% (garments: ['raincoat', 'a bright yellow raincoat', 'bright yellow raincoat'])
+  scene: 20.00% (scenes: ['a bright yellow raincoat', 'in a bright yellow raincoat', 'bright yellow raincoat'])
+
+2026-01-18 23:06:10,872 - fashion_retrieval - INFO - 
+🔍 Query Processing:
+2026-01-18 23:06:10,873 - fashion_retrieval - INFO -   Raw: A person in a bright yellow raincoat
+2026-01-18 23:06:10,873 - fashion_retrieval - INFO -   Parsed colors: ['yellow', 'bright yellow']
+2026-01-18 23:06:10,873 - fashion_retrieval - INFO -   Parsed garments: ['raincoat', 'a bright yellow raincoat', 'bright yellow raincoat']
+2026-01-18 23:06:10,874 - fashion_retrieval - INFO -   Parsed scenes: ['a bright yellow raincoat', 'in a bright yellow raincoat', 'bright yellow raincoat']
+2026-01-18 23:06:10,874 - fashion_retrieval - INFO - 
+Weight allocation:
+  clip: 40.00% (global semantic understanding)
+  color: 20.00% (colors: ['yellow', 'bright yellow'])
+  garment: 20.00% (garments: ['raincoat', 'a bright yellow raincoat', 'bright yellow raincoat'])
+  scene: 20.00% (scenes: ['a bright yellow raincoat', 'in a bright yellow raincoat', 'bright yellow raincoat'])
+
+2026-01-18 23:07:06,917 - fashion_retrieval - INFO - 
+🔍 Query Processing:
+2026-01-18 23:07:06,917 - fashion_retrieval - INFO -   Raw: Someone wearing a blue shirt sitting on a park bench
+2026-01-18 23:07:06,917 - fashion_retrieval - INFO -   Parsed colors: ['blue']
+2026-01-18 23:07:06,922 - fashion_retrieval - INFO -   Parsed garments: ['blue shirt', 'a blue shirt']
+2026-01-18 23:07:06,923 - fashion_retrieval - INFO -   Parsed scenes: ['park bench', 'a park bench', 'blue shirt']
+2026-01-18 23:07:06,923 - fashion_retrieval - INFO - 
+Weight allocation:
+  clip: 40.00% (global semantic understanding)
+  color: 20.00% (colors: ['blue'])
+  garment: 20.00% (garments: ['blue shirt', 'a blue shirt'])
+  scene: 20.00% (scenes: ['park bench', 'a park bench', 'blue shirt'])
+
+2026-01-18 23:07:10,508 - fashion_retrieval - INFO - 
+🔍 Query Processing:
+2026-01-18 23:07:10,508 - fashion_retrieval - INFO -   Raw: Someone wearing a blue shirt sitting on a park bench
+2026-01-18 23:07:10,508 - fashion_retrieval - INFO -   Parsed colors: ['blue']
+2026-01-18 23:07:10,510 - fashion_retrieval - INFO -   Parsed garments: ['blue shirt', 'a blue shirt']
+2026-01-18 23:07:10,510 - fashion_retrieval - INFO -   Parsed scenes: ['park bench', 'a park bench', 'blue shirt']
+2026-01-18 23:07:10,510 - fashion_retrieval - INFO - 
+Weight allocation:
+  clip: 40.00% (global semantic understanding)
+  color: 20.00% (colors: ['blue'])
+  garment: 20.00% (garments: ['blue shirt', 'a blue shirt'])
+  scene: 20.00% (scenes: ['park bench', 'a park bench', 'blue shirt'])
+
+2026-01-18 23:07:16,606 - fashion_retrieval - INFO - 
+🔍 Query Processing:
+2026-01-18 23:07:16,606 - fashion_retrieval - INFO -   Raw: Someone wearing a blue shirt sitting on a park bench
+2026-01-18 23:07:16,606 - fashion_retrieval - INFO -   Parsed colors: ['blue']
+2026-01-18 23:07:16,608 - fashion_retrieval - INFO -   Parsed garments: ['blue shirt', 'a blue shirt']
+2026-01-18 23:07:16,608 - fashion_retrieval - INFO -   Parsed scenes: ['park bench', 'a park bench', 'blue shirt']
+2026-01-18 23:07:16,608 - fashion_retrieval - INFO - 
+Weight allocation:
+  clip: 40.00% (global semantic understanding)
+  color: 20.00% (colors: ['blue'])
+  garment: 20.00% (garments: ['blue shirt', 'a blue shirt'])
+  scene: 20.00% (scenes: ['park bench', 'a park bench', 'blue shirt'])
+
+2026-01-18 23:08:05,434 - fashion_retrieval - INFO - 
+🔍 Query Processing:
+2026-01-18 23:08:05,434 - fashion_retrieval - INFO -   Raw: Casual weekend outfit for a city walk
+2026-01-18 23:08:05,434 - fashion_retrieval - INFO -   Parsed colors: ['casual weekend']
+2026-01-18 23:08:05,434 - fashion_retrieval - INFO -   Parsed garments: ['casual weekend', 'casual weekend outfit']
+2026-01-18 23:08:05,436 - fashion_retrieval - INFO -   Parsed scenes: ['city walk', 'casual weekend', 'casual weekend outfit']
+2026-01-18 23:08:05,436 - fashion_retrieval - INFO - 
+Weight allocation:
+  clip: 40.00% (global semantic understanding)
+  color: 20.00% (colors: ['casual weekend'])
+  garment: 20.00% (garments: ['casual weekend', 'casual weekend outfit'])
+  scene: 20.00% (scenes: ['city walk', 'casual weekend', 'casual weekend outfit'])
+
+2026-01-18 23:08:28,522 - fashion_retrieval - INFO - 
+🔍 Query Processing:
+2026-01-18 23:08:28,524 - fashion_retrieval - INFO -   Raw: A red tie and a white shirt in a formal setting.
+2026-01-18 23:08:28,525 - fashion_retrieval - INFO -   Parsed colors: ['red tie and a white', 'white']
+2026-01-18 23:08:28,526 - fashion_retrieval - INFO -   Parsed garments: ['a red tie and a white shirt', 'a red tie']
+2026-01-18 23:08:28,526 - fashion_retrieval - INFO -   Parsed scenes: ['a red tie and a white shirt in a formal setting', 'a red tie and a white shirt', 'a red tie']
+2026-01-18 23:08:28,527 - fashion_retrieval - INFO - 
+Weight allocation:
+  clip: 40.00% (global semantic understanding)
+  color: 20.00% (colors: ['red tie and a white', 'white'])
+  garment: 20.00% (garments: ['a red tie and a white shirt', 'a red tie'])
+  scene: 20.00% (scenes: ['a red tie and a white shirt in a formal setting', 'a red tie and a white shirt', 'a red tie'])
+
+2026-01-18 23:08:29,129 - fashion_retrieval - INFO - 
+🔍 Query Processing:
+2026-01-18 23:08:29,131 - fashion_retrieval - INFO -   Raw: A red tie and a white shirt in a formal setting.
+2026-01-18 23:08:29,131 - fashion_retrieval - INFO -   Parsed colors: ['red tie and a white', 'white']
+2026-01-18 23:08:29,131 - fashion_retrieval - INFO -   Parsed garments: ['a red tie and a white shirt', 'a red tie']
+2026-01-18 23:08:29,131 - fashion_retrieval - INFO -   Parsed scenes: ['a red tie and a white shirt in a formal setting', 'a red tie and a white shirt', 'a red tie']
+2026-01-18 23:08:29,131 - fashion_retrieval - INFO - 
+Weight allocation:
+  clip: 40.00% (global semantic understanding)
+  color: 20.00% (colors: ['red tie and a white', 'white'])
+  garment: 20.00% (garments: ['a red tie and a white shirt', 'a red tie'])
+  scene: 20.00% (scenes: ['a red tie and a white shirt in a formal setting', 'a red tie and a white shirt', 'a red tie'])
+
+2026-01-18 23:08:48,190 - fashion_retrieval - INFO - 
+🔍 Query Processing:
+2026-01-18 23:08:48,190 - fashion_retrieval - INFO -   Raw: A red tie and a white shirt in a formal setting.
+2026-01-18 23:08:48,190 - fashion_retrieval - INFO -   Parsed colors: ['red tie and a white', 'white']
+2026-01-18 23:08:48,190 - fashion_retrieval - INFO -   Parsed garments: ['a red tie and a white shirt', 'a red tie']
+2026-01-18 23:08:48,190 - fashion_retrieval - INFO -   Parsed scenes: ['a red tie and a white shirt in a formal setting', 'a red tie and a white shirt', 'a red tie']
+2026-01-18 23:08:48,192 - fashion_retrieval - INFO - 
+Weight allocation:
+  clip: 40.00% (global semantic understanding)
+  color: 20.00% (colors: ['red tie and a white', 'white'])
+  garment: 20.00% (garments: ['a red tie and a white shirt', 'a red tie'])
+  scene: 20.00% (scenes: ['a red tie and a white shirt in a formal setting', 'a red tie and a white shirt', 'a red tie'])
+
+2026-01-18 23:09:28,676 - fashion_retrieval - INFO - 
+🔍 Query Processing:
+2026-01-18 23:09:28,686 - fashion_retrieval - INFO -   Raw: A red tie and a white shirt in a formal setting.
+2026-01-18 23:09:28,686 - fashion_retrieval - INFO -   Parsed colors: ['red tie and a white', 'white']
+2026-01-18 23:09:28,686 - fashion_retrieval - INFO -   Parsed garments: ['a red tie and a white shirt', 'a red tie']
+2026-01-18 23:09:28,686 - fashion_retrieval - INFO -   Parsed scenes: ['a red tie and a white shirt in a formal setting', 'a red tie and a white shirt', 'a red tie']
+2026-01-18 23:09:28,686 - fashion_retrieval - INFO - 
+Weight allocation:
+  clip: 40.00% (global semantic understanding)
+  color: 20.00% (colors: ['red tie and a white', 'white'])
+  garment: 20.00% (garments: ['a red tie and a white shirt', 'a red tie'])
+  scene: 20.00% (scenes: ['a red tie and a white shirt in a formal setting', 'a red tie and a white shirt', 'a red tie'])
+
+2026-01-18 23:09:42,563 - fashion_retrieval - INFO - 
+🔍 Query Processing:
+2026-01-18 23:09:42,563 - fashion_retrieval - INFO -   Raw: blue shirt park
+2026-01-18 23:09:42,563 - fashion_retrieval - INFO -   Parsed colors: ['blue']
+2026-01-18 23:09:42,563 - fashion_retrieval - INFO -   Parsed garments: ['blue shirt']
+2026-01-18 23:09:42,563 - fashion_retrieval - INFO -   Parsed scenes: ['blue shirt']
+2026-01-18 23:09:42,563 - fashion_retrieval - INFO - 
+Weight allocation:
+  clip: 40.00% (global semantic understanding)
+  color: 20.00% (colors: ['blue'])
+  garment: 20.00% (garments: ['blue shirt'])
+  scene: 20.00% (scenes: ['blue shirt'])
+
+2026-01-18 23:10:07,110 - fashion_retrieval - INFO - 
+🔍 Query Processing:
+2026-01-18 23:10:07,111 - fashion_retrieval - INFO -   Raw: Someone wearing a blue shirt sitting on a park 
+2026-01-18 23:10:07,111 - fashion_retrieval - INFO -   Parsed colors: ['blue']
+2026-01-18 23:10:07,112 - fashion_retrieval - INFO -   Parsed garments: ['blue shirt', 'a blue shirt']
+2026-01-18 23:10:07,113 - fashion_retrieval - INFO -   Parsed scenes: ['a park', 'park', 'blue shirt', 'blue shirt sitting on a park']
+2026-01-18 23:10:07,113 - fashion_retrieval - INFO - 
+Weight allocation:
+  clip: 40.00% (global semantic understanding)
+  color: 20.00% (colors: ['blue'])
+  garment: 20.00% (garments: ['blue shirt', 'a blue shirt'])
+  scene: 20.00% (scenes: ['a park', 'park', 'blue shirt', 'blue shirt sitting on a park'])
+
+2026-01-18 23:10:07,785 - fashion_retrieval - INFO - 
+🔍 Query Processing:
+2026-01-18 23:10:07,786 - fashion_retrieval - INFO -   Raw: Someone wearing a blue shirt sitting on a park 
+2026-01-18 23:10:07,786 - fashion_retrieval - INFO -   Parsed colors: ['blue']
+2026-01-18 23:10:07,786 - fashion_retrieval - INFO -   Parsed garments: ['blue shirt', 'a blue shirt']
+2026-01-18 23:10:07,786 - fashion_retrieval - INFO -   Parsed scenes: ['a park', 'park', 'blue shirt', 'blue shirt sitting on a park']
+2026-01-18 23:10:07,787 - fashion_retrieval - INFO - 
+Weight allocation:
+  clip: 40.00% (global semantic understanding)
+  color: 20.00% (colors: ['blue'])
+  garment: 20.00% (garments: ['blue shirt', 'a blue shirt'])
+  scene: 20.00% (scenes: ['a park', 'park', 'blue shirt', 'blue shirt sitting on a park'])
+
