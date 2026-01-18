@@ -12,16 +12,30 @@
 
 ---
 
-##  Overview
+## 🌟 Overview
 This repository implements a **Multimodal Fashion Context Retrieval System** designed to bridge the gap between natural language descriptions and visual fashion attributes. Unlike traditional keyword-based search, this system understands **global semantic context** (CLIP) alongside **granular attributes** like colors, specific garments, and scene locations.
+
+### 📊 Dataset
+Used the **FashionPedia (ValidationSet)** for indexing and retrieval evaluation, providing a rich variety of fashion images with detailed attributes.
+
+### 💡 Key Ideas & Approach
+1.  **Multimodal Feature Fusion**: Combines global semantic embeddings with specialized vectors for **Color** (64d), **Garment** (128d), and **Scene** (128d) for an 832-dimensional representation.
+2.  **Adaptive Latent Search**: Dynamically adjusts fusion weights at query-time. Simple queries rely on CLIP, while attribute-rich queries (e.g., *"Yellow raincoat"*) boost specific modality weights.
+3.  **Two-Stage Retrieval**:
+    *   **Stage 1**: High-speed vector search (FAISS) to retrieve top candidates.
+    *   **Stage 2**: Attribute-based re-ranking to refine results based on explicit metadata matches.
+4.  **Zero-Shot Intelligence**: Leverages pre-trained CLIP and DistilBERT-based Question Answering for zero-shot attribute extraction without requiring custom training.
+   
 ### Key Capabilities:
 - **🧠 Semantic Understanding**: Detects intent like *"Professional business attire"* or *"Casual weekend outfit"*.
 - **🎨 Attribute-Aware Fusion**: Dynamically weights color, garment, and scene features based on query characteristics.
 - **⚡ Two-Stage Retrieval**: Combines fast vector search (FAISS) with an intensive attribute-based re-ranking stage.
 - **🗣️ Natural Language Parsing**: Uses `DistilBERT` to extract specific constraints from messy user queries.
 ---
+
 ## 🏗️ Architecture
 The system uses an **832-dimensional fused embedding space**, combining global and local features for maximum precision.
+
 ```mermaid
 graph TD
     subgraph "Data Sources"
@@ -60,7 +74,9 @@ graph TD
     FAISS --> Search
     Rerank --> Results & Analytics
 ```
+
 ---
+
 ## 🛠️ Tech Stack
 - **Computer Vision**: OpenAI CLIP (ViT-B/32)
 - **NLP**: HuggingFace Transformers (DistilBERT-SQuAD)
@@ -96,6 +112,8 @@ source venv/bin/activate
 ```bash
 # Install core requirements
 pip install -r requirements.txt
+# Download Spacy model for NLP parsing
+python -m spacy download en_core_web_sm
 ```
 ### 4. Data Preparation
 - Ensure you have a set of images you want to search through.
@@ -110,6 +128,7 @@ Extract features and build the FAISS index:
 python run_pipeline.py
 ```
 *Note: This will process all images in `data/raw/` and save the index to `data/processed/`.*
+
 ### B. Interactive Web UI
 Launch the beautiful Streamlit search interface:
 ```bash
@@ -122,7 +141,9 @@ Our system doesn't just treat all features equally. It uses **Adaptive Query-Spe
 - **General Queries**: Defaults to CLIP-heavy search for broad semantic understanding.
 - **Attribute Queries**: If you search for *"bright yellow raincoat"*, the system automatically boosts the **Color** and **Garment** weights to 35%+, ensuring visual precision.
 - **Compositional Queries**: Complexity detection triggers a **Two-Stage Retrieval** where the top 50 candidates are re-scored using explicit attribute matching.
+  
 ---
+
 ## 📁 Project Structure
 ```text
 ├── indexer/          # Feature extraction & vector building
