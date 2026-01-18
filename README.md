@@ -11,6 +11,7 @@
 </div>
 
 
+#### Demo : https://youtu.be/mOdFtb3oYlU
 #### Sample Outputs : https://github.com/Yashwanth-79/Multimodal-Fashion-Context-Retrieval/tree/main/eval_outputs 
 
 ---
@@ -161,4 +162,5 @@ Our system doesn't just treat all features equally. It uses **Adaptive Query-Spe
 <div align="center">
   Developed by <a href="https://github.com/Yashwanth-79">Yashwanth-79</a>
 </div>
+
 
