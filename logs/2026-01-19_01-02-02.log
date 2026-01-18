@@ -1,0 +1,3 @@
+2026-01-19 01:02:02,478 - fashion_retrieval - INFO - Loading search engine...
+2026-01-19 01:02:02,494 - fashion_retrieval - INFO - ✓ Loaded FAISS index: 2076 vectors
+2026-01-19 01:02:02,527 - fashion_retrieval - INFO - ✓ Loaded metadata: 2076 images
