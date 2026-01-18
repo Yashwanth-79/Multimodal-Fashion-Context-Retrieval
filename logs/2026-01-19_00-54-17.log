@@ -1,0 +1,19 @@
+2026-01-19 00:54:18,253 - fashion_retrieval - INFO - Loading search engine...
+2026-01-19 00:54:18,260 - fashion_retrieval - INFO - ✓ Loaded FAISS index: 2076 vectors
+2026-01-19 00:54:18,285 - fashion_retrieval - INFO - ✓ Loaded metadata: 2076 images
+2026-01-19 00:54:49,067 - fashion_retrieval - INFO - Loading DistilBERT model for smart attribute extraction...
+2026-01-19 00:54:56,478 - fashion_retrieval - INFO - ✓ Search engine ready!
+
+2026-01-19 00:54:59,593 - fashion_retrieval - INFO - 
+🔍 Query Processing:
+2026-01-19 00:54:59,593 - fashion_retrieval - INFO -   Raw: A person in a yellow raincoat.
+2026-01-19 00:54:59,594 - fashion_retrieval - INFO -   Parsed colors: ['yellow']
+2026-01-19 00:54:59,594 - fashion_retrieval - INFO -   Parsed garments: ['yellow raincoat', 'a person in a yellow raincoat', 'raincoat', 'a yellow raincoat']
+2026-01-19 00:54:59,595 - fashion_retrieval - INFO -   Parsed scenes: ['in a yellow raincoat', 'a yellow raincoat', 'yellow raincoat', 'a person in a yellow raincoat']
+2026-01-19 00:54:59,595 - fashion_retrieval - INFO - 
+Weight allocation:
+  clip: 40.00% (global semantic understanding)
+  color: 20.00% (colors: ['yellow'])
+  garment: 20.00% (garments: ['yellow raincoat', 'a person in a yellow raincoat', 'raincoat', 'a yellow raincoat'])
+  scene: 20.00% (scenes: ['in a yellow raincoat', 'a yellow raincoat', 'yellow raincoat', 'a person in a yellow raincoat'])
+

@@ -1,0 +1,6 @@
+2026-01-19 00:57:05,183 - fashion_retrieval - INFO - Loading search engine...
+2026-01-19 00:57:05,191 - fashion_retrieval - INFO - ✓ Loaded FAISS index: 2076 vectors
+2026-01-19 00:57:05,217 - fashion_retrieval - INFO - ✓ Loaded metadata: 2076 images
+2026-01-19 00:57:36,402 - fashion_retrieval - INFO - Loading DistilBERT model for smart attribute extraction...
+2026-01-19 00:57:42,791 - fashion_retrieval - INFO - ✓ Search engine ready!
+
