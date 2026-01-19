@@ -64,8 +64,10 @@ graph TD
         Rerank[Attribute Re-ranking Stage 2]
     end
     subgraph "User Output"
-        Results[Ranked Fashion Images]
-        Analytics[Query Analysis & Weights]
+        Results[Ranked Fashion Images
+                Analytics
+                Metrics]
+        
     end
     Images --> CLIP & Color & Garment & Scene
     CLIP & Color & Garment & Scene --> Fusion
