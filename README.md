@@ -78,7 +78,7 @@ graph TD
     QEncoder --> Search
     Search --> Rerank
     FAISS --> Search
-    Rerank --> Results & Analytics
+    Rerank --> Results 
 ```
 
 ---
