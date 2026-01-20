@@ -3,7 +3,7 @@
   <h1>🛍️ Multimodal Fashion Context Retrieval</h1>
   <p><b>State-of-the-art semantic search for fashion using Multimodal Fusion & Two-Stage Retrieval</b></p>
   
-  [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+  [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
   [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/get-started/locally/)
   [![Framework: CLIP](https://img.shields.io/badge/Framework-CLIP-black)](https://github.com/openai/CLIP)
   [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
@@ -164,6 +164,7 @@ Our system doesn't just treat all features equally. It uses **Adaptive Query-Spe
 <div align="center">
   Developed by <a href="https://github.com/Yashwanth-79">Yashwanth-79</a>
 </div>
+
 
 
 
