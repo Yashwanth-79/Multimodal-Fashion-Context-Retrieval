@@ -216,7 +216,7 @@ class FashionSearchEngine:
         Two-stage retrieval: CLIP-based retrieval + attribute re-ranking
         BONUS: Use this if standard search still gives poor results
         """
-        # Stage 1: Get top-100 with current method
+        # Stage 1: Get top-50 with current method
         results, parsed = self.search(query, top_k=50)
         
         # Stage 2: Re-rank by explicit attribute matching
